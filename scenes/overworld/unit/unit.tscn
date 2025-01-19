@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://bo6mute7ubylf"]
 
-[ext_resource type="Script" path="res://scenes/unit/Unit.gd" id="1_04vdg"]
+[ext_resource type="Script" path="res://scenes/overworld/unit/Unit.gd" id="1_04vdg"]
 [ext_resource type="Resource" uid="uid://bnkf7n0i8dhfi" path="res://resources/overworld/grid/Grid.tres" id="2_arbg8"]
 
 [sub_resource type="Animation" id="Animation_mp445"]

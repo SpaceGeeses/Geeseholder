@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://b7pf3w18l8edy"]
 
-[ext_resource type="PackedScene" uid="uid://bo6mute7ubylf" path="res://scenes/unit/unit.tscn" id="1_t6l18"]
+[ext_resource type="PackedScene" uid="uid://bo6mute7ubylf" path="res://scenes/overworld/unit/unit.tscn" id="1_t6l18"]
 
 [sub_resource type="Curve2D" id="Curve2D_ekbbh"]
 _data = {
