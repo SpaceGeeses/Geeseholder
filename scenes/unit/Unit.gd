@@ -17,7 +17,7 @@ signal walk_finished
 ## Distance to which the unit can walk in cells.
 @export var move_range := 6
 ## The unit's move speed when it's moving along a path.
-@export var move_speed := 600.0
+@export var move_speed := 300.0
 ## Texture representing the unit.
 @export var skin: Texture:
 	set(value):
@@ -57,7 +57,7 @@ var _is_walking := false:
 
 
 
-func _ready() -> void:
+func _ready() -> void:	
 	set_process(false)
 	_path_follow.rotates = false
 
@@ -67,7 +67,7 @@ func _ready() -> void:
 	# We create the curve resource here because creating it in the editor prevents us from
 	# moving the unit.
 	if not Engine.is_editor_hint():
-		curve = Curve2D.new()
+			curve = Curve2D.new()
 
 
 func _process(delta: float) -> void:
