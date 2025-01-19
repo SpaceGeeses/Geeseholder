@@ -28,12 +28,15 @@ layer_0/tile_data = PackedInt32Array(0, 1, 6, 1, 1, 6, 2, 1, 6, 3, 1, 6, 4, 1, 6
 [node name="HUD" type="CanvasLayer" parent="."]
 
 [node name="Label" type="Label" parent="HUD"]
-offset_left = 8.0
-offset_right = 72.0
-offset_bottom = 23.0
-theme_override_font_sizes/font_size = 50
-text = "Hey Hey
+offset_left = -2464.0
+offset_top = -1880.0
+offset_right = -2265.0
+offset_bottom = -1777.0
+theme_override_font_sizes/font_size = 75
+text = "0
 "
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Borders" type="StaticBody2D" parent="."]
 position = Vector2(-2928, -1840)
