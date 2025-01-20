@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bo6mute7ubylf"]
+[gd_scene load_steps=9 format=3 uid="uid://bo6mute7ubylf"]
 
 [ext_resource type="Script" path="res://scenes/overworld/unit/Unit.gd" id="1_04vdg"]
 [ext_resource type="Resource" uid="uid://bnkf7n0i8dhfi" path="res://resources/overworld/grid/Grid.tres" id="2_arbg8"]
@@ -16,6 +16,18 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
 }
 
 [sub_resource type="Animation" id="Animation_opkbp"]
@@ -51,17 +63,36 @@ tracks/0/keys = {
 "values": [Color(1, 0.00784314, 1, 1), Color(0.00392157, 0.00392157, 0.00392157, 1)]
 }
 
+[sub_resource type="Animation" id="Animation_2hsj1"]
+resource_name = "walking"
+length = 3.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0666667, 0.366667, 0.7, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, -0.677188, 0.418879, 0.0]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_iiuce"]
 _data = {
 "RESET": SubResource("Animation_mp445"),
 "idle": SubResource("Animation_opkbp"),
-"selected": SubResource("Animation_wh2l5")
+"selected": SubResource("Animation_wh2l5"),
+"walking": SubResource("Animation_2hsj1")
 }
 
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_8fn13"]
-size = Vector2(64, 64)
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_jl4jv"]
+size = Vector2(32, 32)
 
 [node name="Unit" type="Path2D"]
+position = Vector2(0, 6.705)
 script = ExtResource("1_04vdg")
 grid = ExtResource("2_arbg8")
 move_speed = 600.0
@@ -77,7 +108,6 @@ rotates = false
 loop = false
 
 [node name="Sprite" type="Sprite2D" parent="PathFollow2D"]
-scale = Vector2(0.25, 0.25)
-texture = SubResource("PlaceholderTexture2D_8fn13")
+texture = SubResource("PlaceholderTexture2D_jl4jv")
 
 [node name="Shadow" type="Sprite2D" parent="PathFollow2D"]
