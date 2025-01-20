@@ -8,16 +8,12 @@ extends Path2D
 ## Emitted when the unit reached the end of a path along which it was walking.
 signal walk_finished
 
-@onready var _sprite: Sprite2D = $PathFollow2D/Sprite
-@onready var _anim_player: AnimationPlayer = $AnimationPlayer
-@onready var _path_follow: PathFollow2D = $PathFollow2D
-
 ## Shared resource of type Grid, used to calculate map coordinates.
 @export var grid: Resource
 ## Distance to which the unit can walk in cells.
 @export var move_range := 6
 ## The unit's move speed when it's moving along a path.
-@export var move_speed := 300.0
+@export var move_speed := 600.0
 ## Texture representing the unit.
 @export var skin: Texture:
 	set(value):
@@ -41,7 +37,7 @@ var cell := Vector2.ZERO:
 		#	the grid, so we clamp them
 		cell = grid.grid_clamp(value)
 ## Toggles the "selected" animation on the unit.
-var is_selected := false:
+var is_selected := true:
 	set(value):
 		is_selected = value
 		if is_selected:
@@ -54,20 +50,23 @@ var _is_walking := false:
 		_is_walking = value
 		set_process(_is_walking)
 
+@onready var _sprite: Sprite2D = $PathFollow2D/Sprite
+@onready var _anim_player: AnimationPlayer = $AnimationPlayer
+@onready var _path_follow: PathFollow2D = $PathFollow2D
 
 
-
-func _ready() -> void:	
+func _ready() -> void:
 	set_process(false)
 	_path_follow.rotates = false
 
 	cell = grid.calculate_grid_coordinates(position)
 	position = grid.calculate_map_position(cell)
+	_anim_player.play("idle")
 
 	# We create the curve resource here because creating it in the editor prevents us from
 	# moving the unit.
 	if not Engine.is_editor_hint():
-			curve = Curve2D.new()
+		curve = Curve2D.new()
 
 
 func _process(delta: float) -> void:

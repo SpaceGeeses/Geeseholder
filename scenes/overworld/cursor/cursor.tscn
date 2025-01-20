@@ -9,9 +9,9 @@ script = ExtResource("1_p7fx6")
 grid = ExtResource("2_8s7eo")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(20, -32)
+position = Vector2(14, -23)
 rotation = -2.15806
-scale = Vector2(3, 3)
+scale = Vector2(2, 2)
 texture = ExtResource("1_ygimc")
 
 [node name="Timer" type="Timer" parent="."]
