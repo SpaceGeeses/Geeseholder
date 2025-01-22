@@ -1,12 +1,16 @@
-[gd_scene load_steps=3 format=3 uid="uid://v8dmb4x5stns"]
+[gd_scene load_steps=4 format=3 uid="uid://v8dmb4x5stns"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_poqq7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8e08o"]
 size = Vector2(50, 50)
 
-[node name="Player" type="Node2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oqw8a"]
+size = Vector2(40, 40)
+
+[node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_poqq7")
+max_speed = 800
 
 [node name="ColorRect" type="ColorRect" parent="."]
 anchors_preset = 4
@@ -17,9 +21,13 @@ offset_bottom = 40.0
 grow_vertical = 2
 metadata/_edit_use_anchors_ = true
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="CollisionArea2D" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionArea2D"]
 position = Vector2(20, 20)
 scale = Vector2(0.8, 0.8)
 shape = SubResource("RectangleShape2D_8e08o")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(20, 20)
+shape = SubResource("RectangleShape2D_oqw8a")

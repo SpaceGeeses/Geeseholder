@@ -1,37 +1,30 @@
-extends Node2D
+extends CharacterBody2D
 
 var p_height: int
-const PLAYER_SPEED: int = 5000
+@export var max_speed = 200
+@export var acceleration_smoothing = 5
 
-@onready var area = $Area2D
-
-var velocity: Vector2 = Vector2()
 
 func _ready() -> void:
-	p_height = $ColorRect.get_size().y
+    $CollisionArea2D.body_entered.connect(on_body_entered)
+    p_height = $ColorRect.get_size().y
 
-	area.monitoring = true
 
 func _process(delta: float) -> void:
-	if Input.is_action_just_pressed('ui_up'):
-		velocity.y = -PLAYER_SPEED * delta
-	elif Input.is_action_just_pressed('ui_down'):
-		velocity.y = PLAYER_SPEED * delta
-	else:
-		velocity.y = 0
+    var movement_vector = get_movement_vector()
+    var direction = movement_vector.normalized()
+    var target_velocity = direction * max_speed
 
-	var new_position = position + velocity
-	position = new_position
-
-	if is_colliding():
-		velocity.y = 0
-		print("Collision detected, movement stopped")
+    velocity = velocity.lerp(target_velocity, 1 - exp(-delta * acceleration_smoothing))
+    move_and_slide()
 
 
-func is_colliding() -> bool:
-	var overlapping_bodies = area.get_overlapping_bodies()
-	return overlapping_bodies.size() > 0
+func get_movement_vector():
+    
+    var y_movement = Input.get_action_strength("move_down") - Input.get_action_strength("move_up")
+
+    return Vector2(0, y_movement)
 
 
 func on_body_entered(other_body: Node2D):
-	print('hello')
+    print("hello")
