@@ -11,5 +11,11 @@ config_version=5
 [application]
 
 config/name="Geeseholder"
+run/main_scene="res://mini_game.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=1400
+window/size/viewport_height=848
