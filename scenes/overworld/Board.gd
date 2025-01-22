@@ -19,7 +19,7 @@ var _walkable_cells := []
 
 
 func _ready() -> void:
-	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
+	# Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 	_reinitialize()
 
 
@@ -60,31 +60,43 @@ func _reinitialize() -> void:
 ## Returns an array with all the coordinates of walkable cells based on the `max_distance`.
 func _flood_fill(cell: Vector2, max_distance: int) -> Array:
 	var array := []
+	# cell is in reference to the players position
+	# initialize so that the only cell is the players current position
 	var stack := [cell]
 	while not stack.size() == 0:
+		#remove the first index of stack and store it in current
 		var current = stack.pop_back()
+		#check if the index popped off of stack is within the bounds of the grid
+		# this is 0,0 for the first time it runs so it's within bounds
+
 		if not grid.is_within_bounds(current):
 			continue
+		# check if the cell we just popped is already in the final array and skip if it is
 		if current in array:
 			continue
 
+		#get the vector  difference between the players current position and the cell that was popped from the stack
 		var difference: Vector2 = (current - cell).abs()
+		# check if the distance between the player cell and teh cell that was popped is greater than our set max distance
 		var distance := int(difference.x + difference.y)
 		if distance > max_distance:
 			continue
 
+		#the cell popped from stack is valid so we push it as a valid tile to the final array
 		array.append(current)
 		for direction in DIRECTIONS:
+			# now check every direction around the popped tile
+			# if it has a Unit (ie the player or object) don't consider it
 			var coordinates: Vector2 = current + direction
 			if is_occupied(coordinates):
 				continue
+			# if the cooordinate exists in the final array, skip it
 			if coordinates in array:
 				continue
-			# Minor optimization: If this neighbor is already queued
-			#	to be checked, we don't need to queue it again
+			#if the coordiante already existss in our stack, skip it
 			if coordinates in stack:
 				continue
-
+			#append all valid coordiantes and rerun the loop
 			stack.append(coordinates)
 	return array
 

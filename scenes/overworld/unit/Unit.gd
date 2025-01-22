@@ -61,7 +61,6 @@ func _ready() -> void:
 
 	cell = grid.calculate_grid_coordinates(position)
 	position = grid.calculate_map_position(cell)
-	_anim_player.play("idle")
 
 	# We create the curve resource here because creating it in the editor prevents us from
 	# moving the unit.

@@ -19,7 +19,7 @@ var cell := Vector2.ZERO:
 	set(value):
 		# We first clamp the cell coordinates and ensure that we aren't
 		#	trying to move outside the grid boundaries
-		var new_cell: Vector2 = grid.grid_clamp(value)
+		var new_cell: Vector2 = value
 		if new_cell.is_equal_approx(cell):
 			return
 
@@ -43,7 +43,7 @@ func _ready() -> void:
 func _unhandled_input(event: InputEvent) -> void:
 	# Navigating cells with the mouse.
 	if event is InputEventMouseMotion:
-		cell = grid.calculate_grid_coordinates(event.position)
+		cell = grid.calculate_grid_coordinates(event.global_position)
 	# Trying to select something in a cell.
 	elif event.is_action_pressed("click") or event.is_action_pressed("ui_accept"):
 		emit_signal("accept_pressed", cell)
@@ -51,4 +51,5 @@ func _unhandled_input(event: InputEvent) -> void:
 
 
 func _draw() -> void:
-	draw_rect(Rect2(-grid.cell_size / 2, grid.cell_size), Color.WHITE, false, 2.0)
+	print(-grid.cell_size / 2, grid.cell_size)
+	draw_rect(Rect2(Vector2(-38, -38), Vector2(64, 64)), Color.WHITE, false, 1.0)
