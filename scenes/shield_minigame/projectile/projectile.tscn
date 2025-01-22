@@ -1,9 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://4hggnu5xrjjo"]
+[gd_scene load_steps=4 format=3 uid="uid://4hggnu5xrjjo"]
 
-[ext_resource type="Script" path="res://projectile.gd" id="1_onepj"]
+[ext_resource type="Script" path="res://scenes/shield_minigame/projectile/projectile.gd" id="1_onepj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kyvn8"]
 size = Vector2(10.6667, 10.6667)
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_e8b6k"]
+particle_flag_disable_z = true
+gravity = Vector3(0, 98, 0)
 
 [node name="Projectile" type="Node2D"]
 script = ExtResource("1_onepj")
@@ -22,3 +26,11 @@ position = Vector2(8, 8)
 position = Vector2(-8, -8)
 scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kyvn8")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+amount = 200
+process_material = SubResource("ParticleProcessMaterial_e8b6k")
+lifetime = 27.08
+speed_scale = 1.74
+explosiveness = 0.72
+randomness = 0.38

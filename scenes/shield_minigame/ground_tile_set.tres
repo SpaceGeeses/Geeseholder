@@ -1,7 +1,7 @@
 [gd_resource type="TileSet" load_steps=5 format=3 uid="uid://dbkce8eqbh8t0"]
 
-[ext_resource type="Texture2D" uid="uid://bg2iteavrva8q" path="res://terrainAssets/grass-terrain.png" id="1_h6r74"]
-[ext_resource type="Texture2D" uid="uid://bxxelktu48u5r" path="res://terrainAssets/rock-terrain.png" id="2_l02g7"]
+[ext_resource type="Texture2D" uid="uid://bg2iteavrva8q" path="res://scenes/shield_minigame/terrainAssets/grass-terrain.png" id="1_h6r74"]
+[ext_resource type="Texture2D" uid="uid://bxxelktu48u5r" path="res://scenes/shield_minigame/terrainAssets/rock-terrain.png" id="2_l02g7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xvunl"]
 texture = ExtResource("1_h6r74")

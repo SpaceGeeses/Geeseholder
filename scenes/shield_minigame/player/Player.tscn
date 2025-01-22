@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://v8dmb4x5stns"]
 
-[ext_resource type="Script" path="res://player.gd" id="1_poqq7"]
+[ext_resource type="Script" path="res://scenes/shield_minigame/player/player.gd" id="1_poqq7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8e08o"]
 size = Vector2(50, 50)

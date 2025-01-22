@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bxxelktu48u5r"
-path="res://.godot/imported/rock-terrain.png-bd17bc1aef347dfb1fe24d41a9f89615.ctex"
+uid="uid://bg2iteavrva8q"
+path="res://.godot/imported/grass-terrain.png-779a9f6967e6ef5251df9049028609ba.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://terrainAssets/rock-terrain.png"
-dest_files=["res://.godot/imported/rock-terrain.png-bd17bc1aef347dfb1fe24d41a9f89615.ctex"]
+source_file="res://scenes/shield_minigame/terrainAssets/grass-terrain.png"
+dest_files=["res://.godot/imported/grass-terrain.png-779a9f6967e6ef5251df9049028609ba.ctex"]
 
 [params]
 
