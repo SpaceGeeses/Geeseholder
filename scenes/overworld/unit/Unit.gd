@@ -30,6 +30,8 @@ signal walk_finished
 			await ready
 		_sprite.position = value
 
+@onready var animation_player = $AnimationPlayer
+
 ## Coordinates of the current cell the cursor moved to.
 var cell := Vector2.ZERO:
 	set(value):
@@ -56,6 +58,7 @@ var _is_walking := false:
 
 
 func _ready() -> void:
+	animation_player.play("idle")
 	set_process(false)
 	_path_follow.rotates = false
 
@@ -79,6 +82,9 @@ func _process(delta: float) -> void:
 		curve.clear_points()
 		emit_signal("walk_finished")
 
+		animation_player.stop(true)
+		animation_player.play("idle")
+
 
 ## Starts walking along the `path`.
 ## `path` is an array of grid coordinates that the function converts to map coordinates.
@@ -91,3 +97,5 @@ func walk_along(path: PackedVector2Array) -> void:
 		curve.add_point(grid.calculate_map_position(point) - position)
 	cell = path[-1]
 	_is_walking = true
+	is_selected = false
+	animation_player.play("walking")

@@ -13,6 +13,7 @@ signal moved(new_cell)
 @export var grid: Resource
 ## Time before the cursor can move again in seconds.
 @export var ui_cooldown := 0.1
+@onready var animationplayer: AnimationPlayer = $AnimationPlayer
 
 ## Coordinates of the current cell the cursor is hovering.
 var cell := Vector2.ZERO:
@@ -38,12 +39,13 @@ var cell := Vector2.ZERO:
 func _ready() -> void:
 	_timer.wait_time = ui_cooldown
 	position = grid.calculate_map_position(cell)
+	animationplayer.play("idle")
 
 
 func _unhandled_input(event: InputEvent) -> void:
 	# Navigating cells with the mouse.
 	if event is InputEventMouseMotion:
-		cell = grid.calculate_grid_coordinates(event.global_position)
+		cell = grid.calculate_grid_coordinates(get_global_mouse_position())
 	# Trying to select something in a cell.
 	elif event.is_action_pressed("click") or event.is_action_pressed("ui_accept"):
 		emit_signal("accept_pressed", cell)

@@ -21,4 +21,4 @@ func _draw():
 		for i in range(grid_size.x):
 			for j in range(grid_size.y):
 				var cell_position = Vector2(i * cell_size.x, j * cell_size.y)
-				draw_rect(Rect2(cell_position, cell_size), Color(0, 0, 0), false, 1)
+				draw_rect(Rect2(cell_position, cell_size), Color(0, 0, 0, 0.6), false, 1)
