@@ -6,28 +6,32 @@
 [node name="Projectiles" type="Node2D"]
 script = ExtResource("1_esc2t")
 
-[node name="Node2D" type="Node2D" parent="."]
+[node name="PivotPoint" type="Node2D" parent="."]
 
-[node name="Projectile" parent="Node2D" instance=ExtResource("1_k0gd2")]
+[node name="Projectile" parent="PivotPoint" instance=ExtResource("1_k0gd2")]
 position = Vector2(0, 128)
 
-[node name="Projectile2" parent="Node2D" instance=ExtResource("1_k0gd2")]
+[node name="Projectile2" parent="PivotPoint" instance=ExtResource("1_k0gd2")]
 position = Vector2(-127, 0)
 
-[node name="Projectile3" parent="Node2D" instance=ExtResource("1_k0gd2")]
+[node name="Projectile3" parent="PivotPoint" instance=ExtResource("1_k0gd2")]
 position = Vector2(128, 0)
 
-[node name="Projectile4" parent="Node2D" instance=ExtResource("1_k0gd2")]
+[node name="Projectile4" parent="PivotPoint" instance=ExtResource("1_k0gd2")]
 position = Vector2(0, -128)
 
-[node name="Projectile5" parent="Node2D" instance=ExtResource("1_k0gd2")]
+[node name="Projectile5" parent="PivotPoint" instance=ExtResource("1_k0gd2")]
 position = Vector2(-96, 83)
 
-[node name="Projectile6" parent="Node2D" instance=ExtResource("1_k0gd2")]
+[node name="Projectile6" parent="PivotPoint" instance=ExtResource("1_k0gd2")]
 position = Vector2(98, 82)
 
-[node name="Projectile7" parent="Node2D" instance=ExtResource("1_k0gd2")]
+[node name="Projectile7" parent="PivotPoint" instance=ExtResource("1_k0gd2")]
 position = Vector2(88, -93)
 
-[node name="Projectile8" parent="Node2D" instance=ExtResource("1_k0gd2")]
+[node name="Projectile8" parent="PivotPoint" instance=ExtResource("1_k0gd2")]
 position = Vector2(-89, -91)
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+autostart = true

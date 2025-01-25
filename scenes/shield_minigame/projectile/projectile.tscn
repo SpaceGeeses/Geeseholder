@@ -1,36 +1,21 @@
-[gd_scene load_steps=4 format=3 uid="uid://4hggnu5xrjjo"]
+[gd_scene load_steps=3 format=3 uid="uid://4hggnu5xrjjo"]
 
 [ext_resource type="Script" path="res://scenes/shield_minigame/projectile/projectile.gd" id="1_onepj"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_kyvn8"]
-size = Vector2(10.6667, 10.6667)
+[sub_resource type="CircleShape2D" id="CircleShape2D_34uhg"]
+radius = 8.0
 
-[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_e8b6k"]
-particle_flag_disable_z = true
-gravity = Vector3(0, 98, 0)
-
-[node name="Projectile" type="Node2D"]
+[node name="projectile" type="CharacterBody2D"]
+position = Vector2(8, 8)
+motion_mode = 1
 script = ExtResource("1_onepj")
 
-[node name="ColorRect" type="ColorRect" parent="."]
-offset_left = -8.0
-offset_top = -8.0
-offset_right = 8.0
-offset_bottom = 8.0
+[node name="color rec" type="ColorRect" parent="."]
+offset_left = -16.0
+offset_top = -16.0
 pivot_offset = Vector2(8, 8)
 
-[node name="Area2D" type="Area2D" parent="."]
-position = Vector2(8, 8)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-8, -8)
 scale = Vector2(1.5, 1.5)
-shape = SubResource("RectangleShape2D_kyvn8")
-
-[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
-amount = 200
-process_material = SubResource("ParticleProcessMaterial_e8b6k")
-lifetime = 27.08
-speed_scale = 1.74
-explosiveness = 0.72
-randomness = 0.38
+shape = SubResource("CircleShape2D_34uhg")
