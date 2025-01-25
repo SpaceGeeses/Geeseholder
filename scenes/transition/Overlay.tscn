@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://ddx0ci82672h8"]
+
+[node name="TextureRect" type="ColorRect"]
+color = Color(0.37, 0.37, 0.37, 0.535)
