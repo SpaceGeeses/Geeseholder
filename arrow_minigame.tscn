@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://dvvj6c7vrf2x6"]
+
+[node name="arrow-minigame" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+format = 2
