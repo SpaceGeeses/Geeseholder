@@ -18,8 +18,6 @@ func choose_random_child():
 	if children.size() > 0:
 		var random_index = randi() % children.size()
 		var random_child: CharacterBody2D = children[random_index]
-		random_child.collision_layer = 2
-		random_child.collision_mask = 2
 		random_child.set_deferred('freeze', false)
 		random_child.velocity = position
 		wait(.1)
