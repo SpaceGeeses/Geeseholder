@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Grid" load_steps=2 format=3 uid="uid://bnkf7n0i8dhfi"]
+
+[ext_resource type="Script" path="res://resources/overworld/grid/Grid.gd" id="1_tnjru"]
+
+[resource]
+script = ExtResource("1_tnjru")
+size = Vector2(20, 20)
+cell_size = Vector2(64, 64)
