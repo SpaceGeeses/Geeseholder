@@ -1,10 +1,11 @@
-[gd_scene load_steps=12 format=3 uid="uid://bo6mute7ubylf"]
+[gd_scene load_steps=11 format=3 uid="uid://bbn320hvh0pyo"]
 
-[ext_resource type="Script" path="res://scenes/overworld/unit/Unit.gd" id="1_04vdg"]
-[ext_resource type="Resource" uid="uid://bnkf7n0i8dhfi" path="res://resources/overworld/grid/Grid.tres" id="2_arbg8"]
-[ext_resource type="Script" path="res://scenes/overworld/unit/HurtBox.gd" id="3_1dtpk"]
-[ext_resource type="Texture2D" uid="uid://2cey12hfxtqa" path="res://scenes/overworld/unit/Sword.png" id="3_tcv0e"]
-[ext_resource type="Texture2D" uid="uid://d1r7kbf67s8cn" path="res://scenes/overworld/unit/unit_shadow.svg" id="4_0qhdp"]
+[ext_resource type="Script" path="res://scenes/overworld/unit/HurtBox.gd" id="1_ypfkp"]
+[ext_resource type="Texture2D" uid="uid://2cey12hfxtqa" path="res://scenes/overworld/unit/Sword.png" id="2_1j4x6"]
+[ext_resource type="Texture2D" uid="uid://d1r7kbf67s8cn" path="res://scenes/overworld/unit/unit_shadow.svg" id="3_bvbx1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1c0lm"]
+size = Vector2(32, 32)
 
 [sub_resource type="Animation" id="Animation_mp445"]
 length = 3.0
@@ -12,7 +13,7 @@ loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("CharacterBody2D/Sprite:modulate")
+tracks/0/path = NodePath("Sprite:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -24,7 +25,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("CharacterBody2D/Sprite:rotation")
+tracks/1/path = NodePath("Sprite:rotation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -36,7 +37,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("CharacterBody2D/Sprite:scale")
+tracks/2/path = NodePath("Sprite:scale")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -48,7 +49,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("CharacterBody2D/Shadow:scale")
+tracks/3/path = NodePath("Player/Shadow:scale")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -60,7 +61,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("CharacterBody2D/Sprite:position")
+tracks/4/path = NodePath("Sprite:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -76,7 +77,7 @@ loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("CharacterBody2D/Sprite:scale")
+tracks/0/path = NodePath("Sprite:scale")
 tracks/0/interp = 2
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -88,7 +89,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("CharacterBody2D/Shadow:scale")
+tracks/1/path = NodePath("Shadow:scale")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -100,7 +101,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("CharacterBody2D/Sprite:rotation")
+tracks/2/path = NodePath("Sprite:rotation")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -112,7 +113,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("CharacterBody2D/Sprite:position")
+tracks/3/path = NodePath("Sprite:position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -128,7 +129,7 @@ loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("CharacterBody2D/Sprite:modulate")
+tracks/0/path = NodePath("Sprite:modulate")
 tracks/0/interp = 2
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -140,7 +141,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("CharacterBody2D/Sprite:scale")
+tracks/1/path = NodePath("Sprite:scale")
 tracks/1/interp = 2
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -152,7 +153,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("CharacterBody2D/Shadow:scale")
+tracks/2/path = NodePath("Player/Shadow:scale")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -164,7 +165,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("CharacterBody2D/Sprite:position")
+tracks/3/path = NodePath("Sprite:position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -174,6 +175,33 @@ tracks/3/keys = {
 "values": [Vector2(-2, 20)]
 }
 
+[sub_resource type="Animation" id="Animation_vhchq"]
+resource_name = "swing"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.266667, 0.5, 0.966667),
+"transitions": PackedFloat32Array(1, 1, 0.34151, 1),
+"update": 0,
+"values": [0.0, -0.436332, 1.20951, 0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.233333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-2, 20), Vector2(-2, 15)]
+}
+
 [sub_resource type="Animation" id="Animation_2hsj1"]
 resource_name = "walking"
 length = 0.8
@@ -181,7 +209,7 @@ loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("CharacterBody2D/Sprite:rotation")
+tracks/0/path = NodePath("Sprite:rotation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -193,7 +221,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("CharacterBody2D/Sprite:modulate")
+tracks/1/path = NodePath("Sprite:modulate")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -205,7 +233,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("CharacterBody2D/Shadow:scale")
+tracks/2/path = NodePath("Player/Shadow:scale")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -217,7 +245,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("CharacterBody2D/Sprite:position")
+tracks/3/path = NodePath("Sprite:position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -232,41 +260,33 @@ _data = {
 "RESET": SubResource("Animation_mp445"),
 "idle": SubResource("Animation_opkbp"),
 "selected": SubResource("Animation_wh2l5"),
+"swing": SubResource("Animation_vhchq"),
 "walking": SubResource("Animation_2hsj1")
 }
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_sro2t"]
-size = Vector2(32, 32)
+[node name="Player" type="Area2D"]
+script = ExtResource("1_ypfkp")
 
-[node name="Unit" type="Path2D"]
-script = ExtResource("1_04vdg")
-grid = ExtResource("2_arbg8")
+[node name="Sprite" type="Sprite2D" parent="." groups=["player"]]
+position = Vector2(-2, 20)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_1j4x6")
+offset = Vector2(0, -240)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+modulate = Color(0.00351917, 0.00351917, 0.00351917, 1)
+position = Vector2(-2, 16.8375)
+scale = Vector2(0.35, 0.35)
+shape = SubResource("RectangleShape2D_1c0lm")
+
+[node name="Shadow" type="Sprite2D" parent="." groups=["player"]]
+modulate = Color(0.00351917, 0.00351917, 0.00351917, 1)
+position = Vector2(-2, 16.8375)
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("3_bvbx1")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 root_node = NodePath("../PathFollow2D")
 libraries = {
 "": SubResource("AnimationLibrary_iiuce")
 }
-
-[node name="PathFollow2D" type="PathFollow2D" parent="."]
-rotates = false
-loop = false
-
-[node name="CharacterBody2D" type="Area2D" parent="PathFollow2D"]
-script = ExtResource("3_1dtpk")
-
-[node name="Shadow" type="Sprite2D" parent="PathFollow2D/CharacterBody2D" groups=["player"]]
-modulate = Color(0.00351917, 0.00351917, 0.00351917, 1)
-position = Vector2(-2, 16.8375)
-scale = Vector2(0.35, 0.35)
-texture = ExtResource("4_0qhdp")
-
-[node name="Sprite" type="Sprite2D" parent="PathFollow2D/CharacterBody2D" groups=["player"]]
-position = Vector2(-2, 20)
-scale = Vector2(0.25, 0.25)
-texture = ExtResource("3_tcv0e")
-offset = Vector2(0, -240)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="PathFollow2D/CharacterBody2D"]
-position = Vector2(-9, -8)
-shape = SubResource("RectangleShape2D_sro2t")

@@ -1,24 +1,8 @@
 [gd_scene load_steps=7 format=3 uid="uid://b6wx7veugxvb3"]
 
 [ext_resource type="Script" path="res://scenes/overworld/cursor/cursor.gd" id="1_p7fx6"]
-[ext_resource type="Texture2D" uid="uid://7p4jt27vu4ar" path="res://scenes/overworld/cursor/tile_0028.png" id="1_ygimc"]
 [ext_resource type="Resource" uid="uid://bnkf7n0i8dhfi" path="res://resources/overworld/grid/Grid.tres" id="2_8s7eo"]
-
-[sub_resource type="Animation" id="Animation_vhti1"]
-resource_name = "idle"
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:offset")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5, 1.03333),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(0, 0), Vector2(0, -5), Vector2(0, 0)]
-}
+[ext_resource type="Texture2D" uid="uid://vac6hq6f7smq" path="res://scenes/overworld/cursor/IMG_1088.png" id="3_ixybf"]
 
 [sub_resource type="Animation" id="Animation_jy0qb"]
 length = 0.001
@@ -35,6 +19,22 @@ tracks/0/keys = {
 "values": [Vector2(0, 0)]
 }
 
+[sub_resource type="Animation" id="Animation_vhti1"]
+resource_name = "idle"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1.03333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -50), Vector2(0, 0)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_1hl66"]
 _data = {
 "RESET": SubResource("Animation_jy0qb"),
@@ -42,14 +42,15 @@ _data = {
 }
 
 [node name="Cursor" type="Node2D"]
+position = Vector2(2, 2)
 script = ExtResource("1_p7fx6")
 grid = ExtResource("2_8s7eo")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(13, -36)
-rotation = -2.15806
-scale = Vector2(1.5, 1.5)
-texture = ExtResource("1_ygimc")
+position = Vector2(21.1234, -41.2678)
+rotation = 0.60912
+scale = Vector2(0.0396672, 0.0396672)
+texture = ExtResource("3_ixybf")
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.1

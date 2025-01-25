@@ -53,5 +53,4 @@ func _unhandled_input(event: InputEvent) -> void:
 
 
 func _draw() -> void:
-	print(-grid.cell_size / 2, grid.cell_size)
-	draw_rect(Rect2(Vector2(-38, -38), Vector2(64, 64)), Color.WHITE, false, 1.0)
+	draw_rect(Rect2(Vector2(-40, -40), Vector2(64, 64)), Color.WHITE, false, 1.0)

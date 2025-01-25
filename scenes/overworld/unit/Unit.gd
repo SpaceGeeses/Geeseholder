@@ -8,21 +8,15 @@ extends Path2D
 ## Emitted when the unit reached the end of a path along which it was walking.
 signal walk_finished
 
-## Shared resource of type Grid, used to calculate map coordinates.
-@export var grid: Resource
-## Distance to which the unit can walk in cells.
+@export var grid: Grid
 @export var move_range := 6
-## The unit's move speed when it's moving along a path.
 @export var move_speed := 600.0
-## Texture representing the unit.
 @export var skin: Texture:
 	set(value):
 		skin = value
 		if not _sprite:
-			# This will resume execution after this node's _ready()
 			await ready
 		_sprite.texture = value
-## Offset to apply to the `skin` sprite in pixels.
 @export var skin_offset := Vector2.ZERO:
 	set(value):
 		skin_offset = value
@@ -35,8 +29,6 @@ signal walk_finished
 ## Coordinates of the current cell the cursor moved to.
 var cell := Vector2.ZERO:
 	set(value):
-		# When changing the cell's value, we don't want to allow coordinates outside
-		#	the grid, so we clamp them
 		cell = grid.grid_clamp(value)
 ## Toggles the "selected" animation on the unit.
 var is_selected := true:
@@ -58,6 +50,7 @@ var _is_walking := false:
 
 
 func _ready() -> void:
+	$PathFollow2D/CharacterBody2D.connect("enemy_contact", enemy_contact)
 	animation_player.play("idle")
 	set_process(false)
 	_path_follow.rotates = false
@@ -65,8 +58,6 @@ func _ready() -> void:
 	cell = grid.calculate_grid_coordinates(position)
 	position = grid.calculate_map_position(cell)
 
-	# We create the curve resource here because creating it in the editor prevents us from
-	# moving the unit.
 	if not Engine.is_editor_hint():
 		curve = Curve2D.new()
 
@@ -86,8 +77,6 @@ func _process(delta: float) -> void:
 		animation_player.play("idle")
 
 
-## Starts walking along the `path`.
-## `path` is an array of grid coordinates that the function converts to map coordinates.
 func walk_along(path: PackedVector2Array) -> void:
 	if path.is_empty():
 		return
@@ -99,3 +88,10 @@ func walk_along(path: PackedVector2Array) -> void:
 	_is_walking = true
 	is_selected = false
 	animation_player.play("walking")
+
+
+func enemy_contact(enemy: Area2D):
+	_is_walking = false
+	animation_player.play("swing")
+	enemy.get_parent().queue_free()
+	GameEvents.emit_scene_changed()
