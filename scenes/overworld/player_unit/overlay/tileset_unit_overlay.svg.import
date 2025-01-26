@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://2cey12hfxtqa"
-path="res://.godot/imported/Sword.png-ae68d426f17fa4fbd1caea6c219cfd98.ctex"
+uid="uid://bavjy1odiaew5"
+path="res://.godot/imported/tileset_unit_overlay.svg-1041b95f9136b0fdd1e884ed923dc8ca.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/overworld/unit/Sword.png"
-dest_files=["res://.godot/imported/Sword.png-ae68d426f17fa4fbd1caea6c219cfd98.ctex"]
+source_file="res://scenes/overworld/player_unit/overlay/tileset_unit_overlay.svg"
+dest_files=["res://.godot/imported/tileset_unit_overlay.svg-1041b95f9136b0fdd1e884ed923dc8ca.ctex"]
 
 [params]
 
@@ -32,3 +32,6 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
+svg/scale=1.0
+editor/scale_with_editor_scale=false
+editor/convert_colors_with_editor_theme=false

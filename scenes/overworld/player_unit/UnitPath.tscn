@@ -1,8 +1,9 @@
 [gd_scene load_steps=4 format=3 uid="uid://dns2rmh1vgexy"]
 
 [ext_resource type="TileSet" uid="uid://cm6yjnobdfr5a" path="res://resources/overworld/grid/unit_path_tileset.tres" id="1_jd33y"]
-[ext_resource type="Script" path="res://scenes/overworld/unit/UnitPath.gd" id="2_ksvxh"]
+[ext_resource type="Script" path="res://scenes/overworld/player_unit/UnitPath.gd" id="2_ksvxh"]
 [ext_resource type="Resource" uid="uid://bnkf7n0i8dhfi" path="res://resources/overworld/grid/Grid.tres" id="3_lc4g2"]
+
 
 [node name="UnitPath" type="TileMap"]
 tile_set = ExtResource("1_jd33y")
