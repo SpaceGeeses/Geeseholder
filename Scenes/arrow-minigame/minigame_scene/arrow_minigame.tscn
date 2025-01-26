@@ -6,6 +6,7 @@
 
 [node name="arrow-minigame" type="Node2D"]
 script = ExtResource("1_sq41n")
+target = ExtResource("3_2uc0h")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource("2_ft4yv")
@@ -15,15 +16,3 @@ layer_0/tile_data = PackedInt32Array(2, 1, 6, 3, 1, 6, 4, 1, 6, 5, 1, 6, 6, 1, 6
 [node name="Timer" type="Timer" parent="."]
 wait_time = 2.0
 autostart = true
-
-[node name="Target" parent="." instance=ExtResource("3_2uc0h")]
-position = Vector2(-28, -28)
-scale = Vector2(2, 2)
-
-[node name="Area_size" type="ColorRect" parent="."]
-visible = false
-offset_left = 140.0
-offset_top = 69.0
-offset_right = 981.0
-offset_bottom = 560.0
-pivot_offset = Vector2(1069, 354)

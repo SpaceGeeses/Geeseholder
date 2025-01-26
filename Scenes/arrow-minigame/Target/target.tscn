@@ -1,8 +1,44 @@
-[gd_scene load_steps=9 format=3 uid="uid://bmlvhgamb0wl2"]
+[gd_scene load_steps=10 format=3 uid="uid://bmlvhgamb0wl2"]
 
 [ext_resource type="Script" path="res://Scenes/arrow-minigame/Target/target.gd" id="1_nmt3a"]
+[ext_resource type="Script" path="res://Scenes/arrow-minigame/Target/bulleye_detector.gd" id="2_rmaet"]
 
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_56oyt"]
+[sub_resource type="Animation" id="Animation_hsj44"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Area2D/target-base:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(33.641, 32)]
+}
+
+[sub_resource type="Animation" id="Animation_ew8i4"]
+resource_name = "scale_change"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Area2D/target-base:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(6, 5.706), Vector2(128, 121.748), Vector2(128, 121.744), Vector2(6, 5.707)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_atdk2"]
+_data = {
+"RESET": SubResource("Animation_hsj44"),
+"scale_change": SubResource("Animation_ew8i4")
+}
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5obaw"]
 radius = 0.184588
@@ -13,64 +49,45 @@ radius = 0.363636
 [sub_resource type="CircleShape2D" id="CircleShape2D_j8b5a"]
 radius = 0.516136
 
-[sub_resource type="Animation" id="Animation_ew8i4"]
-resource_name = "scale_change"
-length = 0.5
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("target-outer:scale")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(6, 5.706), Vector2(64, 60.874)]
-}
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_56oyt"]
 
-[sub_resource type="Animation" id="Animation_hsj44"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("target-outer:scale")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(33.641, 32)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_atdk2"]
-_data = {
-"RESET": SubResource("Animation_hsj44"),
-"scale_change": SubResource("Animation_ew8i4")
-}
-
-[node name="Target" type="Area2D"]
+[node name="Target" type="Area2D" node_paths=PackedStringArray("area")]
 script = ExtResource("1_nmt3a")
-
-[node name="target-outer" type="Sprite2D" parent="."]
-position = Vector2(32, 30)
-scale = Vector2(33.641, 32)
-texture = SubResource("PlaceholderTexture2D_56oyt")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="target-outer"]
-scale = Vector2(1, 1)
-shape = SubResource("CircleShape2D_5obaw")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="target-outer"]
-scale = Vector2(1, 1)
-shape = SubResource("CircleShape2D_43dug")
-
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="target-outer"]
-scale = Vector2(1, 1)
-shape = SubResource("CircleShape2D_j8b5a")
+area = NodePath("Area_size")
 
 [node name="Target_resize" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_atdk2")
 }
+
+[node name="Area_size" type="ColorRect" parent="."]
+visible = false
+offset_left = 140.0
+offset_top = 69.0
+offset_right = 981.0
+offset_bottom = 560.0
+pivot_offset = Vector2(1069, 354)
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("2_rmaet")
+
+[node name="bullseye" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(32, 30)
+scale = Vector2(128, 121.745)
+shape = SubResource("CircleShape2D_5obaw")
+
+[node name="medium-hit" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(32, 30)
+scale = Vector2(128, 121.745)
+shape = SubResource("CircleShape2D_43dug")
+
+[node name="outer-hit" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(32, 30)
+scale = Vector2(128, 121.745)
+shape = SubResource("CircleShape2D_j8b5a")
+
+[node name="target-base" type="Sprite2D" parent="Area2D"]
+visible = false
+position = Vector2(32, 30)
+scale = Vector2(33.641, 32)
+texture = SubResource("PlaceholderTexture2D_56oyt")
