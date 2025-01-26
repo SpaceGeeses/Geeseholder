@@ -6,9 +6,9 @@ extends Area2D
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	add_target_ran_location()
-	# animation_player.play('scale_change')
-	# await animation_player.animation_finished
-	# queue_free()
+	animation_player.play('scale_change')
+	await animation_player.animation_finished
+	queue_free()
 	print('ready')
 
 func add_target_ran_location():
