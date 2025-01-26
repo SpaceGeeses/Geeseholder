@@ -1,0 +1,76 @@
+[gd_scene load_steps=9 format=3 uid="uid://bmlvhgamb0wl2"]
+
+[ext_resource type="Script" path="res://Scenes/arrow-minigame/Target/target.gd" id="1_nmt3a"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_56oyt"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5obaw"]
+radius = 0.184588
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_43dug"]
+radius = 0.363636
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_j8b5a"]
+radius = 0.516136
+
+[sub_resource type="Animation" id="Animation_ew8i4"]
+resource_name = "scale_change"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("target-outer:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(6, 5.706), Vector2(64, 60.874)]
+}
+
+[sub_resource type="Animation" id="Animation_hsj44"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("target-outer:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(33.641, 32)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_atdk2"]
+_data = {
+"RESET": SubResource("Animation_hsj44"),
+"scale_change": SubResource("Animation_ew8i4")
+}
+
+[node name="Target" type="Area2D"]
+script = ExtResource("1_nmt3a")
+
+[node name="target-outer" type="Sprite2D" parent="."]
+position = Vector2(32, 30)
+scale = Vector2(33.641, 32)
+texture = SubResource("PlaceholderTexture2D_56oyt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="target-outer"]
+scale = Vector2(1, 1)
+shape = SubResource("CircleShape2D_5obaw")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="target-outer"]
+scale = Vector2(1, 1)
+shape = SubResource("CircleShape2D_43dug")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="target-outer"]
+scale = Vector2(1, 1)
+shape = SubResource("CircleShape2D_j8b5a")
+
+[node name="Target_resize" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_atdk2")
+}
