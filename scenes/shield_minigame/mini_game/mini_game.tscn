@@ -1,10 +1,10 @@
 [gd_scene load_steps=7 format=3 uid="uid://bv5c3p3qlalps"]
 
 [ext_resource type="Script" path="res://scenes/shield_minigame/mini_game/mini_game.gd" id="1_db41o"]
-[ext_resource type="TileSet" uid="uid://dbkce8eqbh8t0" path="res://scenes/shield_minigame/ground_tile_set.tres" id="2_evq7q"]
-[ext_resource type="PackedScene" uid="uid://v8dmb4x5stns" path="res://scenes/shield_minigame/player/Player.tscn" id="3_wtywq"]
-[ext_resource type="PackedScene" uid="uid://le43kwu7tdic" path="res://scenes/shield_minigame/projectiles/projectiles.tscn" id="4_6y6cf"]
-[ext_resource type="PackedScene" uid="uid://cqhg1orggob65" path="res://scenes/shield_minigame/scorebox/Score-Box.tscn" id="5_p1ogy"]
+[ext_resource type="TileSet" uid="uid://dbkce8eqbh8t0" path="res://Scenes/shield_minigame/ground_tile_set.tres" id="2_evq7q"]
+[ext_resource type="PackedScene" uid="uid://v8dmb4x5stns" path="res://Scenes/shield_minigame/player/Player.tscn" id="3_wtywq"]
+[ext_resource type="PackedScene" uid="uid://le43kwu7tdic" path="res://Scenes/shield_minigame/projectiles/projectiles.tscn" id="4_6y6cf"]
+[ext_resource type="PackedScene" uid="uid://cqhg1orggob65" path="res://Scenes/shield_minigame/scorebox/Score-Box.tscn" id="5_p1ogy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wrn7u"]
 size = Vector2(40, 608)
