@@ -1,0 +1,33 @@
+[gd_scene load_steps=9 format=3 uid="uid://b7pf3w18l8edy"]
+
+[ext_resource type="Script" path="res://scenes/overworld/board.gd" id="1_fjdnt"]
+[ext_resource type="PackedScene" uid="uid://bo6mute7ubylf" path="res://scenes/overworld/unit/unit.tscn" id="1_t6l18"]
+[ext_resource type="PackedScene" uid="uid://b6wx7veugxvb3" path="res://scenes/overworld/cursor/cursor.tscn" id="2_grg75"]
+[ext_resource type="PackedScene" uid="uid://cig835mmr5m8m" path="res://scenes/overworld/overlay/overlay_grid.tscn" id="3_lmeoc"]
+[ext_resource type="PackedScene" uid="uid://dns2rmh1vgexy" path="res://scenes/overworld/UnitPath.tscn" id="4_0nivu"]
+[ext_resource type="Script" path="res://scenes/overworld/UnitPath.gd" id="5_7la05"]
+[ext_resource type="Resource" uid="uid://bnkf7n0i8dhfi" path="res://resources/overworld/grid/Grid.tres" id="6_cdpir"]
+
+[sub_resource type="Curve2D" id="Curve2D_ekbbh"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0)
+}
+point_count = 1
+
+[node name="Board" type="Node2D"]
+position = Vector2(16, 16)
+script = ExtResource("1_fjdnt")
+
+[node name="Unit" parent="." instance=ExtResource("1_t6l18")]
+scale = Vector2(0.275, 0.275)
+curve = SubResource("Curve2D_ekbbh")
+move_speed = 300.0
+
+[node name="Cursor" parent="." instance=ExtResource("2_grg75")]
+
+[node name="OverlayGrid" parent="." instance=ExtResource("3_lmeoc")]
+visible = false
+
+[node name="UnitPath" parent="." instance=ExtResource("4_0nivu")]
+script = ExtResource("5_7la05")
+grid = ExtResource("6_cdpir")
