@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bavjy1odiaew5"
-path="res://.godot/imported/tileset_unit_overlay.svg-747907c4bb5a4cea0a90f270242e5377.ctex"
+uid="uid://012r4fk65uka"
+path="res://.godot/imported/rock_shield_minigame.png-bf762d3d4a6ef05471cf9dc421d901e9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/overworld/unit/unit_overlay/tileset_unit_overlay.svg"
-dest_files=["res://.godot/imported/tileset_unit_overlay.svg-747907c4bb5a4cea0a90f270242e5377.ctex"]
+source_file="res://assets/mini_game_assets/rock_shield_minigame.png"
+dest_files=["res://.godot/imported/rock_shield_minigame.png-bf762d3d4a6ef05471cf9dc421d901e9.ctex"]
 
 [params]
 
@@ -32,6 +32,3 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
-svg/scale=1.0
-editor/scale_with_editor_scale=false
-editor/convert_colors_with_editor_theme=false

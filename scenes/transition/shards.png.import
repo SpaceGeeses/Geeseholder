@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cpeaufedwbjxc"
-path="res://.godot/imported/shards.png-b08252ed2e43e416a45a46aa7307c090.ctex"
+path="res://.godot/imported/shards.png-00fcf850ad8931fa2ebd860fc0297f99.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/transition/shards.png"
-dest_files=["res://.godot/imported/shards.png-b08252ed2e43e416a45a46aa7307c090.ctex"]
+source_file="res://Scenes/transition/shards.png"
+dest_files=["res://.godot/imported/shards.png-00fcf850ad8931fa2ebd860fc0297f99.ctex"]
 
 [params]
 

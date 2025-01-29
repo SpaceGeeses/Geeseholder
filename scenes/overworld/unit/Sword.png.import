@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://2cey12hfxtqa"
-path="res://.godot/imported/Sword.png-ae68d426f17fa4fbd1caea6c219cfd98.ctex"
+path="res://.godot/imported/Sword.png-74a6044c8115c9a47774e20a4d14aae6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/overworld/unit/Sword.png"
-dest_files=["res://.godot/imported/Sword.png-ae68d426f17fa4fbd1caea6c219cfd98.ctex"]
+source_file="res://Scenes/overworld/unit/Sword.png"
+dest_files=["res://.godot/imported/Sword.png-74a6044c8115c9a47774e20a4d14aae6.ctex"]
 
 [params]
 

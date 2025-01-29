@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://4hggnu5xrjjo"]
+[gd_scene load_steps=5 format=3 uid="uid://4hggnu5xrjjo"]
 
 [ext_resource type="Script" path="res://scenes/shield_minigame/projectile/projectile.gd" id="1_onepj"]
+[ext_resource type="Texture2D" uid="uid://bpwgax5q4r1y0" path="res://assets/mini_game_assets/pebble_shield_minigame.png" id="2_qxh54"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_bxn5m"]
 friction = 0.0
@@ -17,12 +18,24 @@ physics_material_override = SubResource("PhysicsMaterial_bxn5m")
 gravity_scale = 0.0
 script = ExtResource("1_onepj")
 
-[node name="color rec" type="ColorRect" parent="."]
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="color rec" type="ColorRect" parent="Area2D"]
 offset_left = -16.0
 offset_top = -16.0
 pivot_offset = Vector2(8, 8)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="collision_detector" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(-8, -8)
 scale = Vector2(1.5, 1.5)
 shape = SubResource("CircleShape2D_34uhg")
+
+[node name="hitbox" type="CollisionShape2D" parent="."]
+position = Vector2(-8, -8)
+scale = Vector2(1.5, 1.5)
+shape = SubResource("CircleShape2D_34uhg")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-8, -7)
+scale = Vector2(0.1665, 0.153)
+texture = ExtResource("2_qxh54")
