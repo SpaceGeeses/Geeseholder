@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://v8dmb4x5stns"]
 
 [ext_resource type="Script" path="res://scenes/shield_minigame/player/player.gd" id="1_poqq7"]
-[ext_resource type="Script" path="res://Scenes/shield_minigame/player/area_2d.gd" id="2_04xvv"]
+[ext_resource type="Script" path="res://Scenes/shield_minigame/player/player_hitbox.gd" id="2_3vebd"]
 [ext_resource type="Texture2D" uid="uid://xgbffjrgvk65" path="res://assets/mini_game_assets/Shield_minigame.png" id="2_aud4j"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oqw8a"]
@@ -12,7 +12,9 @@ script = ExtResource("1_poqq7")
 max_speed = 800
 
 [node name="Area2D" type="Area2D" parent="."]
-script = ExtResource("2_04xvv")
+collision_layer = 9
+collision_mask = 9
+script = ExtResource("2_3vebd")
 
 [node name="Sprite2D" type="Sprite2D" parent="Area2D"]
 rotation = -1.5708

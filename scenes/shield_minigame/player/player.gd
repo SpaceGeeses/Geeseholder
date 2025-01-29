@@ -25,4 +25,4 @@ func get_movement_vector():
 
 
 func on_body_entered(other_body: Node2D):
-	print("hello")
+	pass

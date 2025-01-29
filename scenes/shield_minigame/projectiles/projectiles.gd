@@ -12,7 +12,6 @@ func _ready() -> void:
 
 
 func _on_timer_timeout():
-	print("Time to attack!")
 	choose_random_child()
 
 
@@ -25,12 +24,9 @@ func choose_random_child():
 		random_child.linear_velocity = Vector2(
 			random_child.position.x + speed_modifier, random_child.position.y + speed_modifier
 		)
-		print_debug(random_child)
 		random_child.reparent(parent)
-		print("Random Child selected: ", random_child.name)
-
+		
 	else:
-		print("No children available")
 		return null
 
 
