@@ -4,7 +4,6 @@
 [ext_resource type="Texture2D" uid="uid://cya47nbdtv13w" path="res://scenes/overworld/enemy/gomblin.png" id="1_f0233"]
 [ext_resource type="Resource" uid="uid://bnkf7n0i8dhfi" path="res://resources/overworld/grid/Grid.tres" id="2_dvjxh"]
 
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_354e5"]
 size = Vector2(32, 32)
 

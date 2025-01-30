@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://bnqotc4m3bhk6"]
+
+[ext_resource type="Script" path="res://scenes/minigame/sword_minigame/player_unit/static_body_2d.gd" id="1_xqr3t"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_sh5rr"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("1_xqr3t")
+
+[node name="Line2D" type="Line2D" parent="Area2D"]
+default_color = Color(1, 1, 1, 0.276)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("SegmentShape2D_sh5rr")
+
+[connection signal="area_entered" from="Area2D" to="Area2D" method="_on_area_entered"]

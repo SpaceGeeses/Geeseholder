@@ -1,0 +1,12 @@
+[gd_scene load_steps=5 format=3 uid="uid://cbjuhahf0vw1x"]
+
+[ext_resource type="Script" path="res://scenes/manager/shape_broken_manager.gd" id="1_5g86i"]
+[ext_resource type="PackedScene" uid="uid://pswtjsjjmgun" path="res://scenes/minigame/sword_minigame/player_unit/possible_shapes/BoneBroken.tscn" id="2_0fljr"]
+[ext_resource type="PackedScene" uid="uid://bavjlap1ud7mh" path="res://scenes/minigame/sword_minigame/player_unit/possible_shapes/RockBroken.tscn" id="3_d7pbk"]
+[ext_resource type="PackedScene" uid="uid://df8eiosrp72w4" path="res://scenes/minigame/sword_minigame/player_unit/possible_shapes/StickBroken.tscn" id="4_yeb5t"]
+
+[node name="ShapeBrokenManager" type="Node"]
+script = ExtResource("1_5g86i")
+broken_bone = ExtResource("2_0fljr")
+broken_rock = ExtResource("3_d7pbk")
+broken_stick = ExtResource("4_yeb5t")
