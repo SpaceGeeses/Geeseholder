@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://dvvj6c7vrf2x6"]
+[gd_scene load_steps=8 format=3 uid="uid://dvvj6c7vrf2x6"]
 
 [ext_resource type="Script" path="res://Scenes/arrow-minigame/minigame_scene/arrow_minigame.gd" id="1_sq41n"]
 [ext_resource type="TileSet" uid="uid://t881s2c85f0w" path="res://Scenes/arrow-minigame/ground_tile_set.tres" id="2_ft4yv"]
 [ext_resource type="PackedScene" uid="uid://bmlvhgamb0wl2" path="res://Scenes/arrow-minigame/Target/target.tscn" id="3_2uc0h"]
+[ext_resource type="PackedScene" uid="uid://bimfgcr7828gv" path="res://Scenes/arrow-minigame/final_score/final_score.tscn" id="3_xmgoe"]
 [ext_resource type="Script" path="res://Scenes/arrow-minigame/minigame_scene/score.gd" id="4_y1h6q"]
 [ext_resource type="PackedScene" uid="uid://c3jyx01vllw3s" path="res://Scenes/arrow-minigame/minigame_scene/player_arrow.tscn" id="5_ejtwg"]
 
@@ -16,6 +17,7 @@ shadow_color = Color(0, 0, 0, 1)
 [node name="arrow-minigame" type="Node2D"]
 script = ExtResource("1_sq41n")
 target = ExtResource("3_2uc0h")
+final_score = ExtResource("3_xmgoe")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource("2_ft4yv")
@@ -26,7 +28,7 @@ layer_0/tile_data = PackedInt32Array(2, 1, 6, 3, 1, 6, 4, 1, 6, 5, 1, 6, 6, 1, 6
 wait_time = 2.0
 autostart = true
 
-[node name="Score" type="Label" parent="."]
+[node name="Score" type="Label" parent="." groups=["score"]]
 offset_left = 1024.0
 offset_top = 258.0
 offset_right = 1064.0
