@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://2cey12hfxtqa"
-path="res://.godot/imported/Sword.png-74a6044c8115c9a47774e20a4d14aae6.ctex"
+uid="uid://cya47nbdtv13w"
+path="res://.godot/imported/gomblin.png-0698227d58e9aec274c279ec3409d833.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/overworld/unit/Sword.png"
-dest_files=["res://.godot/imported/Sword.png-74a6044c8115c9a47774e20a4d14aae6.ctex"]
+source_file="res://scenes/overworld/enemy/gomblin.png"
+dest_files=["res://.godot/imported/gomblin.png-0698227d58e9aec274c279ec3409d833.ctex"]
 
 [params]
 

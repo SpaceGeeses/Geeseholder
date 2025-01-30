@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bavjy1odiaew5"
-path="res://.godot/imported/tileset_unit_overlay.svg-747907c4bb5a4cea0a90f270242e5377.ctex"
+uid="uid://d1r7kbf67s8cn"
+path="res://.godot/imported/sword_shadow.svg-02f968318051d29c04c341e62ae0d97e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/overworld/unit/unit_overlay/tileset_unit_overlay.svg"
-dest_files=["res://.godot/imported/tileset_unit_overlay.svg-747907c4bb5a4cea0a90f270242e5377.ctex"]
+source_file="res://resources/characters/sword/sword_shadow.svg"
+dest_files=["res://.godot/imported/sword_shadow.svg-02f968318051d29c04c341e62ae0d97e.ctex"]
 
 [params]
 

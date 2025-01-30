@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cya47nbdtv13w"
-path="res://.godot/imported/gomblin.png-42372ff71c6a66fd1d4fb1e451f28cf6.ctex"
+uid="uid://doj35uit1u2gl"
+path="res://.godot/imported/stick-broken-r.png-36669ae9f165178299e25387557e8c4f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/game_object/enemy/gomblin.png"
-dest_files=["res://.godot/imported/gomblin.png-42372ff71c6a66fd1d4fb1e451f28cf6.ctex"]
+source_file="res://scenes/minigame/sword_minigame/target_shape/possible_shapes/broken/stick-broken-r.png"
+dest_files=["res://.godot/imported/stick-broken-r.png-36669ae9f165178299e25387557e8c4f.ctex"]
 
 [params]
 
