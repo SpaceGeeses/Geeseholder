@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://dvvj6c7vrf2x6"]
+[gd_scene load_steps=7 format=3 uid="uid://dvvj6c7vrf2x6"]
 
 [ext_resource type="Script" path="res://Scenes/arrow-minigame/minigame_scene/arrow_minigame.gd" id="1_sq41n"]
 [ext_resource type="TileSet" uid="uid://t881s2c85f0w" path="res://Scenes/arrow-minigame/ground_tile_set.tres" id="2_ft4yv"]
 [ext_resource type="PackedScene" uid="uid://bmlvhgamb0wl2" path="res://Scenes/arrow-minigame/Target/target.tscn" id="3_2uc0h"]
 [ext_resource type="Script" path="res://Scenes/arrow-minigame/minigame_scene/score.gd" id="4_y1h6q"]
+[ext_resource type="PackedScene" uid="uid://c3jyx01vllw3s" path="res://Scenes/arrow-minigame/minigame_scene/player_arrow.tscn" id="5_ejtwg"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_clic1"]
 font_size = 74
@@ -34,3 +35,5 @@ text = "0
 "
 label_settings = SubResource("LabelSettings_clic1")
 script = ExtResource("4_y1h6q")
+
+[node name="Player_arrow" parent="." instance=ExtResource("5_ejtwg")]
