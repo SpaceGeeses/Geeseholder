@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bcg7dgwjyxy1f"
-path="res://.godot/imported/stick-broken-l.png-5bb2a28e33d7de9a42040eae7a088817.ctex"
+uid="uid://bnl8k86k6w07e"
+path="res://.godot/imported/rock-broken-l.png-efd0e8e9e4652666cf2bc4b167516202.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/minigame/sword_minigame/player_unit/possible_shapes/stick-broken-l.png"
-dest_files=["res://.godot/imported/stick-broken-l.png-5bb2a28e33d7de9a42040eae7a088817.ctex"]
+source_file="res://scenes/minigame/sword_minigame/target_shape/possible_shapes/broken/rock-broken-l.png"
+dest_files=["res://.godot/imported/rock-broken-l.png-efd0e8e9e4652666cf2bc4b167516202.ctex"]
 
 [params]
 

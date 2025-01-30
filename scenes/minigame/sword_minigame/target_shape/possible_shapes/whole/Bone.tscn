@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://ci2flulibn4m4"]
 
-[ext_resource type="Texture2D" uid="uid://daji72gga7w8a" path="res://scenes/minigame/sword_minigame/player_unit/possible_shapes/bone.png" id="1_3b5t2"]
-[ext_resource type="Script" path="res://scenes/minigame/sword_minigame/player_unit/possible_shapes/bone.gd" id="1_ocrc4"]
+[ext_resource type="Texture2D" uid="uid://daji72gga7w8a" path="res://scenes/minigame/sword_minigame/target_shape/possible_shapes/whole/bone.png" id="1_3b5t2"]
+[ext_resource type="Script" path="res://scenes/minigame/sword_minigame/target_shape/possible_shapes/whole/bone.gd" id="1_ocrc4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xbjm8"]
 size = Vector2(8, 2)

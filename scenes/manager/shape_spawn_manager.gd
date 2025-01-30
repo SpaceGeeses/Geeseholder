@@ -13,6 +13,7 @@ func _on_timer_timeout():
 	var shape_instance: Node2D = shape.instantiate()
 	var position = add_target_ran_location()
 	shape_instance.position = position
+	shape_instance.scale = Vector2.ZERO
 	get_parent().add_child(shape_instance)
 
 

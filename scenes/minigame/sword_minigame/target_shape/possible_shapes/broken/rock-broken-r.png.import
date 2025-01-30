@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dpkp43lnbc1ka"
-path="res://.godot/imported/bone-broken-r.png-b7277bc386f28191970c3b2524c618d3.ctex"
+uid="uid://cho816e6o3jfs"
+path="res://.godot/imported/rock-broken-r.png-7bc392f7f2ae0b46cabdd57192066db6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/minigame/sword_minigame/player_unit/possible_shapes/bone-broken-r.png"
-dest_files=["res://.godot/imported/bone-broken-r.png-b7277bc386f28191970c3b2524c618d3.ctex"]
+source_file="res://scenes/minigame/sword_minigame/target_shape/possible_shapes/broken/rock-broken-r.png"
+dest_files=["res://.godot/imported/rock-broken-r.png-7bc392f7f2ae0b46cabdd57192066db6.ctex"]
 
 [params]
 

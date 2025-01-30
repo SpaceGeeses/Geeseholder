@@ -1,9 +1,9 @@
 [gd_scene load_steps=8 format=3 uid="uid://dqbjcmpm505mm"]
 
 [ext_resource type="Script" path="res://scenes/minigame/sword_minigame/target_shape/target_shape.gd" id="1_xccsf"]
-[ext_resource type="PackedScene" uid="uid://hyadpbm2akwt" path="res://scenes/minigame/sword_minigame/player_unit/possible_shapes/Stick.tscn" id="2_b6w2s"]
-[ext_resource type="PackedScene" uid="uid://bfbu0xbfmjxhs" path="res://scenes/minigame/sword_minigame/player_unit/possible_shapes/Rock.tscn" id="3_ldh5o"]
-[ext_resource type="PackedScene" uid="uid://ci2flulibn4m4" path="res://scenes/minigame/sword_minigame/player_unit/possible_shapes/Bone.tscn" id="4_qhdja"]
+[ext_resource type="PackedScene" uid="uid://hyadpbm2akwt" path="res://scenes/minigame/sword_minigame/target_shape/possible_shapes/whole/Stick.tscn" id="2_b6w2s"]
+[ext_resource type="PackedScene" uid="uid://bfbu0xbfmjxhs" path="res://scenes/minigame/sword_minigame/target_shape/possible_shapes/whole/Rock.tscn" id="3_ldh5o"]
+[ext_resource type="PackedScene" uid="uid://ci2flulibn4m4" path="res://scenes/minigame/sword_minigame/target_shape/possible_shapes/whole/Bone.tscn" id="4_qhdja"]
 
 [sub_resource type="Animation" id="Animation_ofcx6"]
 length = 0.001

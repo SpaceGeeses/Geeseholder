@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bfbu0xbfmjxhs"]
 
-[ext_resource type="Texture2D" uid="uid://bt7i6qeikksny" path="res://scenes/minigame/sword_minigame/player_unit/possible_shapes/rock.png" id="1_5gvbm"]
+[ext_resource type="Texture2D" uid="uid://bt7i6qeikksny" path="res://scenes/minigame/sword_minigame/target_shape/possible_shapes/whole/rock.png" id="1_5gvbm"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_fr2ii"]
 radius = 3.0

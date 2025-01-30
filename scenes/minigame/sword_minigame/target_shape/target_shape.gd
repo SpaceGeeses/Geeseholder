@@ -10,7 +10,8 @@ extends Node2D
 
 
 func _ready() -> void:
+	rotation = randf_range(0, 2 * PI)
 	var selected_shape = selectable_shapes.pick_random().instantiate()
 	add_child(selected_shape)
 	animation_player.play("pop in")
-	rotation = randf_range(0, 2 * PI)
+	selected_shape.visible = true

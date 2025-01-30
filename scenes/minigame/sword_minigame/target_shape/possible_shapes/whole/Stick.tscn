@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://hyadpbm2akwt"]
 
-[ext_resource type="Texture2D" uid="uid://b33ft5c5bnx8j" path="res://scenes/minigame/sword_minigame/player_unit/possible_shapes/stick.png" id="1_t4kl3"]
+[ext_resource type="Texture2D" uid="uid://b33ft5c5bnx8j" path="res://scenes/minigame/sword_minigame/target_shape/possible_shapes/whole/stick.png" id="1_t4kl3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xbjm8"]
 size = Vector2(9, 0.711441)
