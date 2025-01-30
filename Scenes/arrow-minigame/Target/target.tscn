@@ -1,6 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://bmlvhgamb0wl2"]
 
 [ext_resource type="Script" path="res://Scenes/arrow-minigame/Target/target.gd" id="1_nmt3a"]
+[ext_resource type="Texture2D" uid="uid://ce2ypllb8rm2k" path="res://assets/arrow_minigame_assets/target_sprite.png" id="2_i2hqb"]
 [ext_resource type="Script" path="res://Scenes/arrow-minigame/Target/bulleye_detector.gd" id="2_rmaet"]
 
 [sub_resource type="Animation" id="Animation_hsj44"]
@@ -31,7 +32,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.5, 1, 1.5),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
-"values": [Vector2(6, 5.706), Vector2(128, 121.748), Vector2(128, 121.744), Vector2(6, 5.707)]
+"values": [Vector2(6, 5.706), Vector2(15, 14.267), Vector2(15, 14.267), Vector2(6, 5.707)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_atdk2"]
@@ -40,18 +41,17 @@ _data = {
 "scale_change": SubResource("Animation_ew8i4")
 }
 
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_56oyt"]
-
 [sub_resource type="CircleShape2D" id="CircleShape2D_5obaw"]
-radius = 0.184588
+radius = 0.313663
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_43dug"]
-radius = 0.363636
+radius = 1.04895
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_j8b5a"]
-radius = 0.516136
+radius = 1.41429
 
 [node name="Target" type="Area2D" node_paths=PackedStringArray("area")]
+scale = Vector2(0.035, 0.035)
 script = ExtResource("1_nmt3a")
 area = NodePath("Area_size")
 
@@ -69,26 +69,27 @@ offset_bottom = 560.0
 pivot_offset = Vector2(1069, 354)
 
 [node name="target-base" type="Sprite2D" parent="."]
-position = Vector2(32, 32)
 scale = Vector2(33.641, 32)
-texture = SubResource("PlaceholderTexture2D_56oyt")
+texture = ExtResource("2_i2hqb")
+metadata/_edit_group_ = true
 
 [node name="Area2D" type="Area2D" parent="target-base"]
 position = Vector2(-0.25, -0.234375)
-scale = Vector2(0.008, 0.008)
 script = ExtResource("2_rmaet")
 
 [node name="bullseye" type="CollisionShape2D" parent="target-base/Area2D"]
-position = Vector2(32, 30)
+z_index = 2
+position = Vector2(0.0833359, -3.28325)
 scale = Vector2(128, 121.745)
 shape = SubResource("CircleShape2D_5obaw")
 
 [node name="medium-hit" type="CollisionShape2D" parent="target-base/Area2D"]
-position = Vector2(32, 30)
+z_index = 1
+position = Vector2(4.84523, -3.28323)
 scale = Vector2(128, 121.745)
 shape = SubResource("CircleShape2D_43dug")
 
 [node name="outer-hit" type="CollisionShape2D" parent="target-base/Area2D"]
-position = Vector2(32, 30)
+position = Vector2(4.84525, 1.72401)
 scale = Vector2(128, 121.745)
 shape = SubResource("CircleShape2D_j8b5a")

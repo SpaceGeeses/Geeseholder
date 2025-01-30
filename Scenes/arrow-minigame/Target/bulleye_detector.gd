@@ -17,17 +17,15 @@ func _input_event(_viewport: Node, event: InputEvent, shape_idx: int) -> void:
 			match shape_idx:
 				0:
 					print("Clicked on BullsEye")
-					hit += 1
+					hit += 3
 				1:
 					print("Clicked on Mid, so close!")
-					hit += 1
+					hit += 2
 
 				2:
 					print("Clicked on Outside, watch out!")
 					hit += 1
-		print(hit)
 		handle_score(hit)
 
 func handle_score(hit_points):
-	score += hit_points
-	GameEvents.emit_target_hit(score)
+	GameEvents.emit_target_hit(hit_points)
