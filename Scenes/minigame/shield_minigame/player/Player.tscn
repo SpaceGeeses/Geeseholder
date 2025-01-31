@@ -1,8 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://v8dmb4x5stns"]
 
-[ext_resource type="Script" path="res://scenes/shield_minigame/player/player.gd" id="1_poqq7"]
-[ext_resource type="Script" path="res://Scenes/shield_minigame/player/player_hitbox.gd" id="2_3vebd"]
+[ext_resource type="Script" path="res://scenes/minigame/shield_minigame/player/player.gd" id="1_poqq7"]
+[ext_resource type="Script" path="res://scenes/minigame/shield_minigame/player/player_hitbox.gd" id="2_3vebd"]
 [ext_resource type="Texture2D" uid="uid://xgbffjrgvk65" path="res://assets/mini_game_assets/Shield_minigame.png" id="2_aud4j"]
+
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oqw8a"]
 size = Vector2(40, 147)

@@ -11,10 +11,6 @@ func _ready() -> void:
 	label.set("theme_override_colors/font_color", color)
 
 	
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-	
 func uptick_score(type: String):
 	if type == 'enemy':
 		enemy_score += 1

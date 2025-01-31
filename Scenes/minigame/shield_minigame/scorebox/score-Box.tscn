@@ -1,6 +1,7 @@
 [gd_scene load_steps=2 format=3 uid="uid://cqhg1orggob65"]
 
-[ext_resource type="Script" path="res://scenes/shield_minigame/scorebox/score_box.gd" id="1_8e45s"]
+[ext_resource type="Script" path="res://scenes/minigame/shield_minigame/scorebox/score_box.gd" id="1_8e45s"]
+
 
 [node name="Score-box" type="Node2D"]
 script = ExtResource("1_8e45s")

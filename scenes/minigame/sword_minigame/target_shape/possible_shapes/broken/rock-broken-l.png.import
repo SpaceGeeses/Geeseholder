@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bnl8k86k6w07e"
-path="res://.godot/imported/rock-broken-l.png-a5e071352543cf47c3c98c2e4a198629.ctex"
+path="res://.godot/imported/rock-broken-l.png-efd0e8e9e4652666cf2bc4b167516202.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/minigame/sword_minigame/target_shape/possible_shapes/broken/rock-broken-l.png"
-dest_files=["res://.godot/imported/rock-broken-l.png-a5e071352543cf47c3c98c2e4a198629.ctex"]
+source_file="res://scenes/minigame/sword_minigame/target_shape/possible_shapes/broken/rock-broken-l.png"
+dest_files=["res://.godot/imported/rock-broken-l.png-efd0e8e9e4652666cf2bc4b167516202.ctex"]
 
 [params]
 

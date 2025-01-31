@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bxxelktu48u5r"
-path="res://.godot/imported/rock-terrain.png-b8ba8ca8395b12fb741f52022c499b60.ctex"
+path="res://.godot/imported/rock-terrain.png-8bac56e82ab74579d635d954cfa03200.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/shield_minigame/terrainAssets/rock-terrain.png"
-dest_files=["res://.godot/imported/rock-terrain.png-b8ba8ca8395b12fb741f52022c499b60.ctex"]
+source_file="res://scenes/minigame/shield_minigame/terrainAssets/rock-terrain.png"
+dest_files=["res://.godot/imported/rock-terrain.png-8bac56e82ab74579d635d954cfa03200.ctex"]
 
 [params]
 

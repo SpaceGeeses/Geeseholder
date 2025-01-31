@@ -1,8 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://bimfgcr7828gv"]
+[gd_scene load_steps=6 format=3 uid="uid://cyklqt26ufleb"]
 
-[ext_resource type="Script" path="res://scenes/minigame/arrow-minigame/final_score/final_score.gd" id="1_muiu8"]
+[ext_resource type="Script" path="res://scenes/minigame/shield_minigame/final_score/final_score.gd" id="1_31e0a"]
 
-[sub_resource type="LabelSettings" id="LabelSettings_aamii"]
+[sub_resource type="LabelSettings" id="LabelSettings_1s6nn"]
 font_size = 40
 font_color = Color(1, 0.176471, 0.0862745, 1)
 
@@ -68,7 +68,7 @@ _data = {
 }
 
 [node name="final_score" type="Node2D"]
-script = ExtResource("1_muiu8")
+script = ExtResource("1_31e0a")
 
 [node name="Label" type="Label" parent="."]
 offset_left = -239.0
@@ -79,7 +79,7 @@ rotation = -6.28319
 pivot_offset = Vector2(239.001, 32.9999)
 text = "0
 "
-label_settings = SubResource("LabelSettings_aamii")
+label_settings = SubResource("LabelSettings_1s6nn")
 
 [node name="final_score_boom" type="AnimationPlayer" parent="."]
 libraries = {

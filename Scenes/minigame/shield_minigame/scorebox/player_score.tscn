@@ -1,6 +1,7 @@
 [gd_scene load_steps=2 format=3 uid="uid://chwrgr35lruj0"]
 
-[ext_resource type="PackedScene" uid="uid://cqhg1orggob65" path="res://Scenes/shield_minigame/scorebox/Score-Box.tscn" id="2_5flpu"]
+[ext_resource type="PackedScene" uid="uid://cqhg1orggob65" path="res://scenes/minigame/shield_minigame/scorebox/score-Box.tscn" id="2_5flpu"]
+
 
 [node name="PlayerScore" type="Node2D"]
 
