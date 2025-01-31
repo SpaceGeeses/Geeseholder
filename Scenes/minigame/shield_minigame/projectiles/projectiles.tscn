@@ -53,5 +53,5 @@ physics_material_override = SubResource("PhysicsMaterial_bxn5m")
 script = null
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 3.0
+wait_time = 0.5
 autostart = true

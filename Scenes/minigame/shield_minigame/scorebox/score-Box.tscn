@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" path="res://scenes/minigame/shield_minigame/scorebox/score_box.gd" id="1_8e45s"]
 
-
 [node name="Score-box" type="Node2D"]
+z_index = 1
 script = ExtResource("1_8e45s")
 color = Color(0.175287, 0.583269, 0.595911, 1)
 
