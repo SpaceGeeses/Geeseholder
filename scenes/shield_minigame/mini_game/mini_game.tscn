@@ -1,12 +1,14 @@
-[gd_scene load_steps=6 format=3 uid="uid://bv5c3p3qlalps"]
+[gd_scene load_steps=7 format=3 uid="uid://bv5c3p3qlalps"]
 
-[ext_resource type="TileSet" uid="uid://dbkce8eqbh8t0" path="res://Scenes/shield_minigame/ground_tile_set.tres" id="2_evq7q"]
-[ext_resource type="PackedScene" uid="uid://v8dmb4x5stns" path="res://Scenes/shield_minigame/player/Player.tscn" id="3_wtywq"]
-[ext_resource type="PackedScene" uid="uid://le43kwu7tdic" path="res://Scenes/shield_minigame/projectiles/projectiles.tscn" id="4_6y6cf"]
-[ext_resource type="PackedScene" uid="uid://dlv7hj5dtcv0x" path="res://Scenes/shield_minigame/scorebox/enemy_score.tscn" id="5_75w6n"]
-[ext_resource type="PackedScene" uid="uid://chwrgr35lruj0" path="res://Scenes/shield_minigame/scorebox/player_score.tscn" id="5_o0lou"]
+[ext_resource type="Script" path="res://scenes/shield_minigame/mini_game/mini_game.gd" id="1_lffcw"]
+[ext_resource type="TileSet" uid="uid://dbkce8eqbh8t0" path="res://scenes/shield_minigame/ground_tile_set.tres" id="2_evq7q"]
+[ext_resource type="PackedScene" uid="uid://v8dmb4x5stns" path="res://scenes/shield_minigame/player/Player.tscn" id="3_wtywq"]
+[ext_resource type="PackedScene" uid="uid://le43kwu7tdic" path="res://scenes/shield_minigame/projectiles/projectiles.tscn" id="4_6y6cf"]
+[ext_resource type="PackedScene" uid="uid://dlv7hj5dtcv0x" path="res://scenes/shield_minigame/scorebox/enemy_score.tscn" id="5_75w6n"]
+[ext_resource type="PackedScene" uid="uid://chwrgr35lruj0" path="res://scenes/shield_minigame/scorebox/player_score.tscn" id="5_o0lou"]
 
 [node name="Mini-game" type="Node"]
+script = ExtResource("1_lffcw")
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(145, 75)
