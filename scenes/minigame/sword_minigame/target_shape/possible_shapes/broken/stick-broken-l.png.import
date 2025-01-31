@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bcg7dgwjyxy1f"
-path="res://.godot/imported/stick-broken-l.png-9c11485b35364aebaff52a79caab7892.ctex"
+path="res://.godot/imported/stick-broken-l.png-891992c17cba94ef66bd3c9cfe57ca99.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/minigame/sword_minigame/target_shape/possible_shapes/broken/stick-broken-l.png"
-dest_files=["res://.godot/imported/stick-broken-l.png-9c11485b35364aebaff52a79caab7892.ctex"]
+source_file="res://Scenes/minigame/sword_minigame/target_shape/possible_shapes/broken/stick-broken-l.png"
+dest_files=["res://.godot/imported/stick-broken-l.png-891992c17cba94ef66bd3c9cfe57ca99.ctex"]
 
 [params]
 

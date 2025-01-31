@@ -4,12 +4,6 @@ extends Area2D
 var hit: int = 0
 var isHit: bool = false
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	# self.connect('input_event', _on_input_event)
-	pass
-
-
 func _input_event(_viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton && isHit == false:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
