@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://7p4jt27vu4ar"
-path="res://.godot/imported/tile_0028.png-ee1f6e141f4c9b897076b75ea1967f82.ctex"
+path="res://.godot/imported/tile_0028.png-2fee094dc99facb4c9e15d9388495853.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/overworld/cursor/tile_0028.png"
-dest_files=["res://.godot/imported/tile_0028.png-ee1f6e141f4c9b897076b75ea1967f82.ctex"]
+source_file="res://Scenes/overworld/cursor/tile_0028.png"
+dest_files=["res://.godot/imported/tile_0028.png-2fee094dc99facb4c9e15d9388495853.ctex"]
 
 [params]
 

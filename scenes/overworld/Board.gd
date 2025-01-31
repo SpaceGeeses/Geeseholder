@@ -1,7 +1,7 @@
 ## Represents and manages the game board. Stores references to entities that are in each cell and
 ## tells whether cells are occupied or not.
 ## Units can only move around the grid one at a time.
-class_name GameBoard
+class_name Board
 extends Node2D
 
 const DIRECTIONS = [Vector2.LEFT, Vector2.RIGHT, Vector2.UP, Vector2.DOWN]
