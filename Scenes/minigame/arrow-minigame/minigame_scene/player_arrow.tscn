@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://c3jyx01vllw3s"]
+
+[ext_resource type="Texture2D" uid="uid://dmcynis7xdyye" path="res://assets/arrow_minigame_assets/arrow_sprite.png" id="1_rm3as"]
+[ext_resource type="Script" path="res://Scenes/arrow-minigame/minigame_scene/marker_2d.gd" id="1_smgqi"]
+
+[node name="Player_arrow" type="Node2D"]
+position = Vector2(59, 300)
+
+[node name="Marker2D" type="Marker2D" parent="."]
+script = ExtResource("1_smgqi")
+
+[node name="Sprite2D" type="Sprite2D" parent="Marker2D"]
+scale = Vector2(0.172179, 0.172179)
+texture = ExtResource("1_rm3as")

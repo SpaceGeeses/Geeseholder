@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://bnqotc4m3bhk6"]
+
+[ext_resource type="Script" path="res://scenes/minigame/sword_minigame/PlayerUnit/static_body_2d.gd" id="1_xqr3t"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_fxcsf"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+script = ExtResource("1_xqr3t")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" groups=["created_collisions"]]
+shape = SubResource("SegmentShape2D_fxcsf")
+
+[node name="Line2D" type="Line2D" parent="StaticBody2D"]

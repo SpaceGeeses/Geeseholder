@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cpeaufedwbjxc"
-path="res://.godot/imported/shards.png-00fcf850ad8931fa2ebd860fc0297f99.ctex"
+uid="uid://dpkp43lnbc1ka"
+path="res://.godot/imported/bone-broken-r.png-2603dbb858216128028a7a9f71120f66.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/transition/shards.png"
-dest_files=["res://.godot/imported/shards.png-00fcf850ad8931fa2ebd860fc0297f99.ctex"]
+source_file="res://Scenes/minigame/sword_minigame/target_shape/possible_shapes/broken/bone-broken-r.png"
+dest_files=["res://.godot/imported/bone-broken-r.png-2603dbb858216128028a7a9f71120f66.ctex"]
 
 [params]
 

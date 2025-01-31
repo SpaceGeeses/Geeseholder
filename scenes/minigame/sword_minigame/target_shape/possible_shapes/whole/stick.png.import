@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cpeaufedwbjxc"
-path="res://.godot/imported/shards.png-00fcf850ad8931fa2ebd860fc0297f99.ctex"
+uid="uid://b33ft5c5bnx8j"
+path="res://.godot/imported/stick.png-2f750deb3cc022ac64bdc8bd15f451c2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/transition/shards.png"
-dest_files=["res://.godot/imported/shards.png-00fcf850ad8931fa2ebd860fc0297f99.ctex"]
+source_file="res://Scenes/minigame/sword_minigame/target_shape/possible_shapes/whole/stick.png"
+dest_files=["res://.godot/imported/stick.png-2f750deb3cc022ac64bdc8bd15f451c2.ctex"]
 
 [params]
 

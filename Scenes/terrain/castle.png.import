@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cpeaufedwbjxc"
-path="res://.godot/imported/shards.png-00fcf850ad8931fa2ebd860fc0297f99.ctex"
+uid="uid://dlr85lwpek2db"
+path="res://.godot/imported/castle.png-948b53d9386162279a9aa843db6457d2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/transition/shards.png"
-dest_files=["res://.godot/imported/shards.png-00fcf850ad8931fa2ebd860fc0297f99.ctex"]
+source_file="res://Scenes/terrain/castle.png"
+dest_files=["res://.godot/imported/castle.png-948b53d9386162279a9aa843db6457d2.ctex"]
 
 [params]
 

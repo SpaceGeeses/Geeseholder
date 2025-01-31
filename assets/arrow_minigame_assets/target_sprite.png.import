@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cpeaufedwbjxc"
-path="res://.godot/imported/shards.png-00fcf850ad8931fa2ebd860fc0297f99.ctex"
+uid="uid://ce2ypllb8rm2k"
+path="res://.godot/imported/target_sprite.png-befa170670e3f02519672e310cbe25ad.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/transition/shards.png"
-dest_files=["res://.godot/imported/shards.png-00fcf850ad8931fa2ebd860fc0297f99.ctex"]
+source_file="res://assets/arrow_minigame_assets/target_sprite.png"
+dest_files=["res://.godot/imported/target_sprite.png-befa170670e3f02519672e310cbe25ad.ctex"]
 
 [params]
 

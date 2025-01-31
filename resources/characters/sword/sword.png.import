@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cpeaufedwbjxc"
-path="res://.godot/imported/shards.png-00fcf850ad8931fa2ebd860fc0297f99.ctex"
+uid="uid://2cey12hfxtqa"
+path="res://.godot/imported/sword.png-203373efea0f1283bb1c97343267af87.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/transition/shards.png"
-dest_files=["res://.godot/imported/shards.png-00fcf850ad8931fa2ebd860fc0297f99.ctex"]
+source_file="res://resources/characters/sword/sword.png"
+dest_files=["res://.godot/imported/sword.png-203373efea0f1283bb1c97343267af87.ctex"]
 
 [params]
 
