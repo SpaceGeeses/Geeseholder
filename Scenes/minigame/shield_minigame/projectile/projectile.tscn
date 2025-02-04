@@ -1,0 +1,80 @@
+[gd_scene load_steps=11 format=3 uid="uid://4hggnu5xrjjo"]
+
+[ext_resource type="Script" path="res://scenes/minigame/shield_minigame/projectile/projectile.gd" id="1_o1u4p"]
+[ext_resource type="Texture2D" uid="uid://bpwgax5q4r1y0" path="res://assets/mini_game_assets/pebble_shield_minigame.png" id="2_qxh54"]
+[ext_resource type="Texture2D" uid="uid://dj1i5b4sy0wad" path="res://assets/mini_game_assets/fire_01.png" id="3_yk6b8"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_bxn5m"]
+friction = 0.0
+bounce = 1.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_34uhg"]
+radius = 8.0
+
+[sub_resource type="Gradient" id="Gradient_lq3yd"]
+offsets = PackedFloat32Array(0, 0.0028169, 1)
+colors = PackedColorArray(0.054902, 0.945098, 0, 0.0901961, 0.913725, 0.317647, 0.0588235, 1, 0.054902, 1, 0.466667, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_vh1ih"]
+gradient = SubResource("Gradient_lq3yd")
+
+[sub_resource type="Curve" id="Curve_oeyou"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 0.621105), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_lhawo"]
+curve = SubResource("Curve_oeyou")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_vhyjb"]
+particle_flag_disable_z = true
+emission_shape = 1
+emission_sphere_radius = 1.0
+direction = Vector3(0, -1, 0)
+spread = 50.0
+initial_velocity_max = 100.25
+angular_velocity_min = 32.0
+angular_velocity_max = 32.0
+gravity = Vector3(0, -600, 0)
+linear_accel_min = 100.0
+linear_accel_max = 100.0
+scale_min = 0.5
+scale_max = 0.5
+scale_curve = SubResource("CurveTexture_lhawo")
+color_ramp = SubResource("GradientTexture1D_vh1ih")
+
+[node name="projectile" type="RigidBody2D"]
+position = Vector2(8, 8)
+collision_layer = 2
+collision_mask = 8
+physics_material_override = SubResource("PhysicsMaterial_bxn5m")
+gravity_scale = 0.0
+script = ExtResource("1_o1u4p")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 9
+
+[node name="color rec" type="ColorRect" parent="Area2D"]
+offset_left = -16.0
+offset_top = -16.0
+pivot_offset = Vector2(8, 8)
+
+[node name="collision_detector" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-8, -8)
+scale = Vector2(1.5, 1.5)
+shape = SubResource("CircleShape2D_34uhg")
+
+[node name="hitbox" type="CollisionShape2D" parent="."]
+position = Vector2(-8, -8)
+scale = Vector2(1.5, 1.5)
+shape = SubResource("CircleShape2D_34uhg")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-8, -7)
+scale = Vector2(0.1665, 0.153)
+texture = ExtResource("2_qxh54")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+position = Vector2(-8, -9)
+process_material = SubResource("ParticleProcessMaterial_vhyjb")
+texture = ExtResource("3_yk6b8")
+lifetime = 0.2

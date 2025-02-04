@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://cqhg1orggob65"]
+
+[ext_resource type="Script" path="res://scenes/minigame/shield_minigame/scorebox/score_box.gd" id="1_8e45s"]
+
+[node name="Score-box" type="Node2D"]
+z_index = 1
+script = ExtResource("1_8e45s")
+color = Color(0.175287, 0.583269, 0.595911, 1)
+
+[node name="Label" type="Label" parent="."]
+offset_top = -16.0
+offset_right = 43.0
+offset_bottom = 87.0
+theme_override_colors/font_color = Color(0.952941, 0, 0, 1)
+theme_override_font_sizes/font_size = 75
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1

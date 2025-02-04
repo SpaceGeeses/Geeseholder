@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b33ft5c5bnx8j"
-path="res://.godot/imported/stick.png-2f750deb3cc022ac64bdc8bd15f451c2.ctex"
+path="res://.godot/imported/stick.png-bb67b71ca890955b6872c4c635b1f9a7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/minigame/sword_minigame/target_shape/possible_shapes/whole/stick.png"
-dest_files=["res://.godot/imported/stick.png-2f750deb3cc022ac64bdc8bd15f451c2.ctex"]
+source_file="res://scenes/minigame/sword_minigame/target_shape/possible_shapes/whole/stick.png"
+dest_files=["res://.godot/imported/stick.png-bb67b71ca890955b6872c4c635b1f9a7.ctex"]
 
 [params]
 

@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=3 uid="uid://cyklqt26ufleb"]
+
+[ext_resource type="Script" path="res://scenes/minigame/shield_minigame/final_score/final_score.gd" id="1_31e0a"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_1s6nn"]
+font_size = 40
+font_color = Color(1, 0.176471, 0.0862745, 1)
+
+[sub_resource type="Animation" id="Animation_hqk1l"]
+length = 0.001
+
+[sub_resource type="Animation" id="Animation_ipgop"]
+resource_name = "pop_up"
+length = 2.0
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_sh57m"]
+_data = {
+"RESET": SubResource("Animation_hqk1l"),
+"pop_up": SubResource("Animation_ipgop")
+}
+
+[node name="Label" type="Label"]
+z_index = 1
+offset_left = -239.0
+offset_top = -34.0
+offset_right = 264.0
+offset_bottom = 28.0
+pivot_offset = Vector2(239.247, 33.7627)
+text = "ertasetedste"
+label_settings = SubResource("LabelSettings_1s6nn")
+horizontal_alignment = 1
+script = ExtResource("1_31e0a")
+
+[node name="final_score_boom" type="AnimationPlayer" parent="."]
+root_node = NodePath("")
+libraries = {
+"": SubResource("AnimationLibrary_sh57m")
+}

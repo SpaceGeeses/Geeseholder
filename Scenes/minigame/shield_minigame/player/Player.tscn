@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://v8dmb4x5stns"]
+
+[ext_resource type="Script" path="res://scenes/minigame/shield_minigame/player/player.gd" id="1_poqq7"]
+[ext_resource type="Script" path="res://scenes/minigame/shield_minigame/player/player_hitbox.gd" id="2_3vebd"]
+[ext_resource type="Texture2D" uid="uid://xgbffjrgvk65" path="res://assets/mini_game_assets/Shield_minigame.png" id="2_aud4j"]
+
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oqw8a"]
+size = Vector2(40, 147)
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_poqq7")
+max_speed = 800
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 9
+collision_mask = 9
+script = ExtResource("2_3vebd")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+rotation = -1.5708
+scale = Vector2(0.414516, 0.414516)
+texture = ExtResource("2_aud4j")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_oqw8a")
