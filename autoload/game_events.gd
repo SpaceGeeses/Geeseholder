@@ -4,7 +4,6 @@ signal scene_changed
 signal score_increase
 signal target_hit
 signal shape_broken
-signal projectile_destroyed
 
 
 func emit_scene_changed():

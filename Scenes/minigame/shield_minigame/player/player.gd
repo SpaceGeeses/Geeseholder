@@ -4,10 +4,6 @@ extends CharacterBody2D
 @export var acceleration_smoothing = 5
 
 
-func _ready() -> void:
-	pass
-
-
 func _process(delta: float) -> void:
 	var movement_vector = get_movement_vector()
 	var direction = movement_vector.normalized()
@@ -18,11 +14,6 @@ func _process(delta: float) -> void:
 
 
 func get_movement_vector():
-	
 	var y_movement = Input.get_action_strength("move_down") - Input.get_action_strength("move_up")
 
 	return Vector2(0, y_movement)
-
-
-func on_body_entered(other_body: Node2D):
-	pass
