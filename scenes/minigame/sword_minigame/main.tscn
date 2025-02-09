@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://bnqotc4m3bhk6" path="res://scenes/minigame/sword_minigame/player_unit/PlayerUnit.tscn" id="1_3p1gu"]
 [ext_resource type="PackedScene" uid="uid://b3e8mnk1l7m8n" path="res://scenes/manager/ShapeSpawnManager.tscn" id="2_1wa0m"]
 [ext_resource type="PackedScene" uid="uid://cbjuhahf0vw1x" path="res://scenes/manager/ShapeBrokenManager.tscn" id="3_1hugj"]
-[ext_resource type="PackedScene" uid="uid://btoj7x1kgfnop" path="res://scenes/manager/sword_score_manager.tscn" id="4_2wopi"]
+[ext_resource type="PackedScene" uid="uid://dqbjcmpm505mm" path="res://scenes/minigame/sword_minigame/target_shape/TargetShape.tscn" id="3_p8oy5"]
 
 [node name="Main" type="Node2D"]
 
@@ -11,6 +11,7 @@
 scale = Vector2(0.25, 0.25)
 
 [node name="ShapeSpawnManager" parent="." instance=ExtResource("2_1wa0m")]
+shape = ExtResource("3_p8oy5")
 
 [node name="ShapeBrokenManager" parent="." instance=ExtResource("3_1hugj")]
 

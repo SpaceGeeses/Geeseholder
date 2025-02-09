@@ -1,16 +1,19 @@
 extends Node
 
 @export var shape: PackedScene
+@export var shape_bounds: ColorRect
+@export var spawn_time: float
 @onready var timer: Timer = $Timer
-@onready var shape_bounds: ColorRect = $ShapeBounds
 
 
 func _ready():
 	timer.timeout.connect(_on_timer_timeout)
+	timer.wait_time = spawn_time
 
 
 func _on_timer_timeout():
 	var shape_instance: Node2D = shape.instantiate()
+	print(shape_instance)
 	var position = add_target_ran_location()
 	shape_instance.position = position
 	shape_instance.scale = Vector2.ZERO

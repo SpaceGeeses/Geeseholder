@@ -13,7 +13,6 @@
 [ext_resource type="PackedScene" uid="uid://1kjmf26xnjow" path="res://scenes/transition/TransitionManager.tscn" id="12_5okhw"]
 [ext_resource type="PackedScene" uid="uid://dsdoxyca5gmgi" path="res://scenes/transition/Transition.tscn" id="12_517ka"]
 
-
 [node name="Board" type="Node2D"]
 script = ExtResource("1_836kg")
 grid = ExtResource("2_x6d36")

@@ -1,32 +1,32 @@
 [gd_scene load_steps=7 format=3 uid="uid://bv5c3p3qlalps"]
 
-[ext_resource type="TileSet" uid="uid://dbkce8eqbh8t0" path="res://scenes/minigame/shield_minigame/ground_tile_set.tres" id="2_evq7q"]
-[ext_resource type="PackedScene" uid="uid://dhxddf1x3soyg" path="res://scenes/manager/ScoreManager.tscn" id="3_tle6i"]
-[ext_resource type="PackedScene" uid="uid://v8dmb4x5stns" path="res://scenes/minigame/shield_minigame/player/Player.tscn" id="3_wtywq"]
-[ext_resource type="PackedScene" uid="uid://le43kwu7tdic" path="res://scenes/minigame/shield_minigame/projectiles/projectiles.tscn" id="4_6y6cf"]
-[ext_resource type="PackedScene" uid="uid://dlv7hj5dtcv0x" path="res://scenes/minigame/shield_minigame/scorebox/enemy_score.tscn" id="5_75w6n"]
-[ext_resource type="PackedScene" uid="uid://d1xcwdwasmrit" path="res://scenes/minigame/shield_minigame/mini_game/Borders.tscn" id="6_glh00"]
+[ext_resource type="PackedScene" uid="uid://dhxddf1x3soyg" path="res://scenes/manager/ScoreManager.tscn" id="1_jtqba"]
+[ext_resource type="TileSet" uid="uid://dbkce8eqbh8t0" path="res://resources/minigame/ground_tile_set.tres" id="2_1mnj4"]
+[ext_resource type="PackedScene" uid="uid://v8dmb4x5stns" path="res://scenes/minigame/shield_minigame/player/Player.tscn" id="3_8s75m"]
+[ext_resource type="PackedScene" uid="uid://le43kwu7tdic" path="res://scenes/minigame/shield_minigame/projectiles/projectiles.tscn" id="4_j24uj"]
+[ext_resource type="PackedScene" uid="uid://dlv7hj5dtcv0x" path="res://scenes/minigame/shield_minigame/scorebox/enemy_score.tscn" id="5_d124c"]
+[ext_resource type="PackedScene" uid="uid://d1xcwdwasmrit" path="res://scenes/minigame/shield_minigame/Borders.tscn" id="6_0uahe"]
 
 [node name="Mini-game" type="Node"]
 
-[node name="ScoreManager" parent="." instance=ExtResource("3_tle6i")]
+[node name="ScoreManager" parent="." instance=ExtResource("1_jtqba")]
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(145, 75)
-tile_set = ExtResource("2_evq7q")
+tile_set = ExtResource("2_1mnj4")
 format = 2
 layer_0/tile_data = PackedInt32Array(0, 1, 6, 1, 1, 6, 2, 1, 6, 3, 1, 6, 4, 1, 6, 5, 1, 6, 6, 1, 6, 7, 1, 6, 8, 1, 6, 9, 1, 6, 10, 1, 6, 11, 1, 6, 12, 1, 6, 13, 1, 6, 14, 1, 6, 15, 1, 6, -65529, 262145, 2, -65528, 262145, 2, -65536, 262145, 2, -65535, 262145, 2, -65534, 262145, 2, -65533, 262145, 2, -65532, 262145, 2, -65531, 262145, 2, -65530, 262145, 2, -65527, 262145, 2, -65526, 262145, 2, -65525, 262145, 2, -65524, 262145, 2, -65523, 262145, 2, -65522, 262145, 2, -65521, 262145, 2, 131072, 131072, 1, 196608, 131072, 1, 262144, 131072, 1, 393216, 131072, 1, 458752, 131072, 1, 131087, 131072, 0, 196623, 131072, 0, 262159, 131072, 0, 327695, 131072, 0, 393231, 131072, 0, 458767, 131072, 0, 589824, 262145, 2, 589825, 262145, 2, 589826, 262145, 2, 589827, 262145, 2, 589828, 262145, 2, 589829, 262145, 2, 589830, 262145, 2, 589831, 262145, 2, 589832, 262145, 2, 589833, 262145, 2, 589834, 262145, 2, 589835, 262145, 2, 589836, 262145, 2, 589837, 262145, 2, 589838, 262145, 2, 589839, 262145, 2, 655360, 1, 6, 655361, 1, 6, 655362, 1, 6, 655363, 1, 6, 655364, 1, 6, 655365, 1, 6, 655366, 1, 6, 655367, 1, 6, 655368, 1, 6, 655369, 1, 6, 655370, 1, 6, 655371, 1, 6, 655372, 1, 6, 655373, 1, 6, 655374, 1, 6, 655375, 1, 6, -65520, 196609, 1342177286, 17, 196609, 1342177286, 655376, 196609, 805306374, 589841, 196609, 805306374, 589840, 65537, 1342177281, 16, 65537, 1, 720895, 196609, 1610612742, 655358, 196609, 1610612742, -1, 196609, 6, 65534, 196609, 6, 655359, 65537, 805306369, 65535, 65537, 1610612737, 65553, 131073, 0, 131089, 131073, 0, 196625, 131073, 0, 262161, 131073, 0, 327697, 131073, 0, 393233, 131073, 0, 458769, 131073, 0, 524305, 131073, 0, 131070, 131073, 1, 196606, 131073, 1, 262142, 131073, 1, 327678, 131073, 1, 393214, 131073, 1, 458750, 131073, 1, 524286, 131073, 1, 589822, 131073, 1, 524303, 65536, 2, 65536, 131072, 5, 65551, 131072, 4, 524288, 65536, 1342177282, 65537, 262144, 2, 65538, 262144, 2, 65539, 262144, 2, 65540, 262144, 2, 65541, 262144, 2, 65542, 262144, 2, 65543, 262144, 2, 65544, 262144, 2, 65545, 262144, 2, 65546, 262144, 2, 65547, 262144, 2, 65548, 262144, 2, 65549, 262144, 2, 65550, 262144, 2, 524289, 0, 6, 524290, 0, 6, 524291, 0, 6, 524292, 0, 6, 524293, 0, 6, 524294, 0, 6, 524295, 0, 6, 524296, 0, 6, 524297, 0, 6, 524298, 0, 6, 524299, 0, 6, 524300, 0, 6, 524301, 0, 6, 524302, 0, 6, 131073, 0, 5, 196609, 0, 5, 262145, 0, 5, 327681, 0, 5, 393217, 0, 5, 458753, 0, 5, 131074, 0, 5, 196610, 0, 5, 262146, 0, 5, 327682, 0, 5, 393218, 0, 5, 458754, 0, 5, 131075, 0, 5, 196611, 0, 5, 262147, 0, 5, 327683, 0, 5, 393219, 0, 5, 458755, 0, 5, 131076, 0, 5, 196612, 0, 5, 262148, 0, 5, 327684, 0, 5, 393220, 0, 5, 458756, 0, 5, 131077, 0, 5, 196613, 0, 5, 262149, 0, 5, 327685, 0, 5, 393221, 0, 5, 458757, 0, 5, 131078, 0, 5, 196614, 0, 5, 262150, 0, 5, 327686, 0, 5, 393222, 0, 5, 458758, 0, 5, 131079, 0, 5, 196615, 0, 5, 262151, 0, 5, 327687, 0, 5, 393223, 0, 5, 458759, 0, 5, 131080, 0, 5, 196616, 0, 5, 262152, 0, 5, 327688, 0, 5, 393224, 0, 5, 458760, 0, 5, 131081, 0, 5, 196617, 0, 5, 262153, 0, 5, 327689, 0, 5, 393225, 0, 5, 458761, 0, 5, 131082, 0, 5, 196618, 0, 5, 262154, 0, 5, 327690, 0, 5, 393226, 0, 5, 458762, 0, 5, 131083, 0, 5, 196619, 0, 5, 262155, 0, 5, 327691, 0, 5, 393227, 0, 5, 458763, 0, 5, 131084, 0, 5, 196620, 0, 5, 262156, 0, 5, 327692, 0, 5, 393228, 0, 5, 458764, 0, 5, 131085, 0, 5, 196621, 0, 5, 262157, 0, 5, 327693, 0, 5, 393229, 0, 5, 458765, 0, 5, 131086, 0, 5, 196622, 0, 5, 262158, 0, 5, 327694, 0, 5, 393230, 0, 5, 458766, 0, 5, 327680, 131072, 1, 131071, 1, 5, 196607, 1, 5, 262143, 1, 5, 327679, 1, 5, 393215, 1, 5, 458751, 1, 5, 524287, 1, 5, 589823, 1, 5, 65552, 131073, 1, 131088, 131073, 1, 196624, 131073, 1, 262160, 131073, 1, 327696, 131073, 1, 393232, 131073, 1, 458768, 131073, 1, 524304, 131073, 1)
 
-[node name="Player" parent="." instance=ExtResource("3_wtywq")]
+[node name="Player" parent="." instance=ExtResource("3_8s75m")]
 position = Vector2(229, 431)
 
-[node name="Projectiles" parent="." node_paths=PackedStringArray("parent") instance=ExtResource("4_6y6cf")]
+[node name="Projectiles" parent="." node_paths=PackedStringArray("parent") instance=ExtResource("4_j24uj")]
 position = Vector2(1024, 416)
 parent = NodePath("..")
 speed_modifier = 600
 
-[node name="EnemyScore" parent="." instance=ExtResource("5_75w6n")]
+[node name="EnemyScore" parent="." instance=ExtResource("5_d124c")]
 position = Vector2(137, 82)
 
-[node name="Borders" parent="." instance=ExtResource("6_glh00")]
+[node name="Borders" parent="." instance=ExtResource("6_0uahe")]
 position = Vector2(-2, 2)

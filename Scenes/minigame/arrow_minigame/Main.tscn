@@ -1,0 +1,37 @@
+[gd_scene load_steps=8 format=3 uid="uid://dvvj6c7vrf2x6"]
+
+[ext_resource type="Script" path="res://scenes/minigame/arrow_minigame/main.gd" id="1_8q5gp"]
+[ext_resource type="PackedScene" uid="uid://bmlvhgamb0wl2" path="res://scenes/minigame/arrow_minigame/target/target.tscn" id="3_2uc0h"]
+[ext_resource type="TileSet" uid="uid://dbkce8eqbh8t0" path="res://resources/minigame/ground_tile_set.tres" id="3_o6ybw"]
+[ext_resource type="PackedScene" uid="uid://b3e8mnk1l7m8n" path="res://scenes/manager/ShapeSpawnManager.tscn" id="4_yaevg"]
+[ext_resource type="PackedScene" uid="uid://c3jyx01vllw3s" path="res://scenes/minigame/arrow_minigame/player/PlayerArrow.tscn" id="5_ejtwg"]
+[ext_resource type="PackedScene" uid="uid://dhxddf1x3soyg" path="res://scenes/manager/ScoreManager.tscn" id="5_kykal"]
+[ext_resource type="PackedScene" uid="uid://tf30lhh8kui3" path="res://scenes/minigame/arrow_minigame/timer/TimeRemaining.tscn" id="6_4i5e3"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_8q5gp")
+
+[node name="ScoreManager" parent="." instance=ExtResource("5_kykal")]
+
+[node name="ShapeSpawnManager" parent="." node_paths=PackedStringArray("shape_bounds") instance=ExtResource("4_yaevg")]
+shape = ExtResource("3_2uc0h")
+shape_bounds = NodePath("../ArenaBounds")
+spawn_time = 2.5
+
+[node name="ArenaBounds" type="ColorRect" parent="."]
+visible = false
+offset_left = 303.0
+offset_top = 157.0
+offset_right = 1097.0
+offset_bottom = 604.0
+color = Color(1, 1, 1, 0)
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource("3_o6ybw")
+format = 2
+layer_0/tile_data = PackedInt32Array(131074, 196609, 6, 196610, 131073, 1, 262146, 131073, 1, 327682, 131073, 1, 393218, 131073, 1, 458754, 131073, 1, 524290, 196609, 1610612742, 65539, 196609, 6, 131075, 131073, 0, 196611, 131073, 0, 262147, 131073, 0, 327683, 131073, 0, 393219, 131073, 0, 458755, 131073, 0, 524291, 131073, 0, 65540, 1, 6, 131076, 2, 4, 196612, 2, 4, 262148, 2, 4, 327684, 2, 4, 393220, 2, 4, 458756, 2, 4, 524292, 2, 4, 65541, 1, 6, 131077, 2, 4, 196613, 2, 4, 262149, 2, 4, 327685, 2, 4, 393221, 2, 4, 458757, 2, 4, 524293, 2, 4, 65542, 1, 6, 131078, 2, 4, 196614, 2, 4, 262150, 2, 4, 327686, 2, 4, 393222, 2, 4, 458758, 2, 4, 524294, 2, 4, 65543, 1, 6, 131079, 2, 4, 196615, 2, 4, 262151, 2, 4, 327687, 2, 4, 393223, 2, 4, 458759, 2, 4, 524295, 2, 4, 65544, 1, 6, 131080, 2, 4, 196616, 2, 4, 262152, 2, 4, 327688, 2, 4, 393224, 2, 4, 458760, 2, 4, 524296, 2, 4, 65545, 1, 6, 131081, 2, 4, 196617, 2, 4, 262153, 2, 4, 327689, 2, 4, 393225, 2, 4, 458761, 2, 4, 524297, 2, 4, 65546, 1, 6, 131082, 2, 4, 196618, 2, 4, 262154, 2, 4, 327690, 2, 4, 393226, 2, 4, 458762, 2, 4, 524298, 2, 4, 65547, 1, 6, 131083, 2, 4, 196619, 2, 4, 262155, 2, 4, 327691, 2, 4, 393227, 2, 4, 458763, 2, 4, 524299, 2, 4, 65548, 1, 6, 131084, 2, 4, 196620, 2, 4, 262156, 2, 4, 327692, 2, 4, 393228, 2, 4, 458764, 2, 4, 524300, 2, 4, 65549, 1, 6, 131085, 2, 4, 196621, 2, 4, 262157, 2, 4, 327693, 2, 4, 393229, 2, 4, 524301, 2, 4, 65550, 1, 6, 131086, 2, 4, 196622, 2, 4, 262158, 2, 4, 327694, 2, 4, 393230, 2, 4, 458766, 2, 4, 524302, 2, 4, 65551, 1, 6, 131087, 2, 4, 196623, 2, 4, 262159, 2, 4, 327695, 2, 4, 393231, 2, 4, 458767, 2, 4, 589827, 196609, 1610612742, 589828, 262145, 2, 589829, 262145, 2, 589830, 262145, 2, 589831, 262145, 2, 589832, 262145, 2, 589833, 262145, 2, 589834, 262145, 2, 589835, 262145, 2, 589836, 262145, 2, 589837, 262145, 2, 589838, 262145, 2, 524303, 2, 4, 589839, 262145, 2, 65552, 196609, 1342177286, 131088, 131073, 1, 196624, 131073, 1, 262160, 131073, 1, 327696, 131073, 1, 393232, 131073, 1, 458768, 131073, 1, 524304, 131073, 1, 589840, 196609, 805306374, 131089, 196609, 1342177286, 196625, 131073, 0, 262161, 131073, 0, 327697, 131073, 0, 393233, 131073, 0, 458769, 131073, 0, 524305, 196609, 805306374, 458765, 2, 4)
+
+[node name="TimeRemaining" parent="." instance=ExtResource("6_4i5e3")]
+position = Vector2(649, 748)
+
+[node name="Player_arrow" parent="." instance=ExtResource("5_ejtwg")]

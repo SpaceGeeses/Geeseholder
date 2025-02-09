@@ -1,0 +1,65 @@
+[gd_scene load_steps=7 format=3 uid="uid://bmlvhgamb0wl2"]
+
+[ext_resource type="Texture2D" uid="uid://ce2ypllb8rm2k" path="res://assets/arrow_minigame_assets/target_sprite.png" id="2_i2hqb"]
+[ext_resource type="Script" path="res://scenes/minigame/arrow_minigame/target/bulleye_detector.gd" id="2_rmaet"]
+
+[sub_resource type="Animation" id="Animation_hsj44"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("target-base:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.25, 0.238)]
+}
+
+[sub_resource type="Animation" id="Animation_ew8i4"]
+resource_name = "scale_change"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("target-base:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0.25, 0.238), Vector2(0.25, 0.238), Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_atdk2"]
+_data = {
+"RESET": SubResource("Animation_hsj44"),
+"scale_change": SubResource("Animation_ew8i4")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_j8b5a"]
+radius = 1.41429
+
+[node name="target-base" type="Sprite2D"]
+position = Vector2(238, 119)
+scale = Vector2(0.25, 0.238)
+texture = ExtResource("2_i2hqb")
+script = ExtResource("2_rmaet")
+metadata/_edit_group_ = true
+
+[node name="Target_resize" type="AnimationPlayer" parent="."]
+root_node = NodePath("../..")
+libraries = {
+"": SubResource("AnimationLibrary_atdk2")
+}
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(-0.25, -0.234375)
+
+[node name="TargetArea" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(4.84525, 1.72401)
+scale = Vector2(128, 121.745)
+shape = SubResource("CircleShape2D_j8b5a")
