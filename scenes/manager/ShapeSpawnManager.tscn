@@ -1,24 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://b3e8mnk1l7m8n"]
+[gd_scene load_steps=2 format=3 uid="uid://b3e8mnk1l7m8n"]
 
 [ext_resource type="Script" path="res://scenes/manager/shape_spawn_manager.gd" id="1_1wnmi"]
-[ext_resource type="PackedScene" uid="uid://dqbjcmpm505mm" path="res://scenes/minigame/sword_minigame/target_shape/TargetShape.tscn" id="2_7ehf6"]
 
 [node name="ShapeSpawnManager" type="Node"]
 script = ExtResource("1_1wnmi")
-shape = ExtResource("2_7ehf6")
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 0.25
 autostart = true
-
-[node name="ShapeBounds" type="ColorRect" parent="."]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 64.0
-offset_top = 64.0
-offset_right = -64.0
-offset_bottom = -72.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(1, 1, 1, 0)

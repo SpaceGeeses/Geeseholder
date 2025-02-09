@@ -4,14 +4,15 @@ signal scene_changed
 signal score_increase
 signal target_hit
 signal shape_broken
+signal minigame_ended
 
 
 func emit_scene_changed():
 	scene_changed.emit()
 
 
-func emit_score_increase(type: String):
-	score_increase.emit(type)
+func emit_score_increase(type: String, amount: int = 1):
+	score_increase.emit(type, amount)
 
 
 func emit_target_hit(value: int):

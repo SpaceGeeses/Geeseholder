@@ -12,21 +12,18 @@ var player_score = 0
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	GameEvents.score_increase.connect(uptick_score)
+	GameEvents.minigame_ended.connect(show_final_score)
 
 
-func uptick_score(type: String):
+func uptick_score(type: String, amount: int):
 	if type == "enemy":
-		enemy_score += 1
+		enemy_score += amount
 		enemy_score_label.text = str(enemy_score)
 	elif type == "player":
-		player_score += 1
+		player_score += amount
 		player_score_label.text = str(player_score)
-	check_game_ended()
 
 
-func check_game_ended():
-	var projectile_total: Array = get_tree().get_nodes_in_group("Projectiles")
-	print(projectile_total.size())
-	if projectile_total.size() == 1:
-		final_score.text = "You score " + str(player_score) + " points"
-		animation_player.play("pop_up_final")
+func show_final_score():
+	final_score.text = "You score " + str(player_score) + " points"
+	animation_player.play("pop_up_final")
