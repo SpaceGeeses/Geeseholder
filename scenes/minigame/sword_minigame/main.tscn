@@ -14,3 +14,5 @@ scale = Vector2(0.25, 0.25)
 shape = ExtResource("3_p8oy5")
 
 [node name="ShapeBrokenManager" parent="." instance=ExtResource("3_1hugj")]
+
+[node name="SwordScoreManager" parent="." instance=ExtResource("4_2wopi")]

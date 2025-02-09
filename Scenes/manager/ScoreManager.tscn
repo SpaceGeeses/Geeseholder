@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://dhxddf1x3soyg"]
+[gd_scene load_steps=5 format=3 uid="uid://dhkbwn2hhajvn"]
 
 [ext_resource type="Script" path="res://scenes/manager/score_manager.gd" id="1_tlsd3"]
 
