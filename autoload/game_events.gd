@@ -5,6 +5,8 @@ signal score_increase
 signal target_hit
 signal shape_broken
 signal minigame_ended
+signal final_score_player(player_points: int)
+signal final_score_enemy(player_points_lost: int)
 
 
 func emit_scene_changed():
