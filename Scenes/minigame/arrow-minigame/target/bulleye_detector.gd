@@ -10,14 +10,11 @@ func _input_event(_viewport: Node, event: InputEvent, shape_idx: int) -> void:
 			isHit = true
 			match shape_idx:
 				0:
-					print("Clicked on BullsEye")
 					hit += 3
 				1:
-					print("Clicked on Mid, so close!")
 					hit += 2
 
 				2:
-					print("Clicked on Outside, watch out!")
 					hit += 1
 		handle_score(hit)
 

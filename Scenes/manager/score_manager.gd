@@ -26,7 +26,6 @@ func uptick_score(type: String):
 
 func check_game_ended():
 	var projectile_total: Array = get_tree().get_nodes_in_group("Projectiles")
-	print(projectile_total.size())
 	if projectile_total.size() == 1:
 		final_score.text = "You score " + str(player_score) + " points"
 		animation_player.play("pop_up_final")

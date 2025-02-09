@@ -14,7 +14,6 @@ func _ready() -> void:
 
 
 func _process(_delta: float) -> void:
-	print(get_tree().get_nodes_in_group("created_collisions").size())
 	cursor.position = cursor_position()
 	if Input.is_action_just_pressed("click"):
 		start_drawing()
@@ -50,7 +49,6 @@ func continue_drawing() -> void:
 
 
 func finish_drawing() -> void:
-	print("break!")
 	animation_player.play("idle")
 	line.clear_points()
 	for collision in get_tree().get_nodes_in_group("created_collisions"):
