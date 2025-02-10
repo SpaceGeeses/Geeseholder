@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+extends RigidBody2D
+||||||| 5f537ad
+=======
 extends RigidBody2D
 
 
@@ -9,3 +13,4 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
+>>>>>>> main

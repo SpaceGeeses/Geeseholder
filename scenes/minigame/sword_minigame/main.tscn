@@ -1,28 +1,18 @@
-[gd_scene load_steps=7 format=3 uid="uid://c7g67fkdgu3fx"]
+[gd_scene load_steps=5 format=3 uid="uid://c7g67fkdgu3fx"]
 
 [ext_resource type="PackedScene" uid="uid://bnqotc4m3bhk6" path="res://scenes/minigame/sword_minigame/player_unit/PlayerUnit.tscn" id="1_3p1gu"]
 [ext_resource type="PackedScene" uid="uid://b3e8mnk1l7m8n" path="res://scenes/manager/ShapeSpawnManager.tscn" id="2_1wa0m"]
 [ext_resource type="PackedScene" uid="uid://cbjuhahf0vw1x" path="res://scenes/manager/ShapeBrokenManager.tscn" id="3_1hugj"]
 [ext_resource type="PackedScene" uid="uid://dqbjcmpm505mm" path="res://scenes/minigame/sword_minigame/target_shape/TargetShape.tscn" id="3_p8oy5"]
-[ext_resource type="PackedScene" uid="uid://btoj7x1kgfnop" path="res://scenes/manager/sword_score_manager.tscn" id="5_8xy03"]
-[ext_resource type="PackedScene" uid="uid://cchktipf3g67d" path="res://scenes/minigame/sword_minigame/timer/TimeRemaining.tscn" id="6_s67jj"]
 
 [node name="Main" type="Node2D"]
 
 [node name="PlayerUnit" parent="." instance=ExtResource("1_3p1gu")]
 scale = Vector2(0.25, 0.25)
 
-[node name="ShapeSpawnManager" parent="." node_paths=PackedStringArray("shape_bounds") instance=ExtResource("2_1wa0m")]
+[node name="ShapeSpawnManager" parent="." instance=ExtResource("2_1wa0m")]
 shape = ExtResource("3_p8oy5")
-shape_bounds = NodePath("../ColorRect")
 
 [node name="ShapeBrokenManager" parent="." instance=ExtResource("3_1hugj")]
 
-[node name="SwordScoreManager" parent="." instance=ExtResource("5_8xy03")]
-
-[node name="ColorRect" type="ColorRect" parent="."]
-visible = false
-offset_right = 1403.0
-offset_bottom = 848.0
-
-[node name="TimeRemaining" parent="." instance=ExtResource("6_s67jj")]
+[node name="SwordScoreManager" parent="." instance=ExtResource("4_2wopi")]
