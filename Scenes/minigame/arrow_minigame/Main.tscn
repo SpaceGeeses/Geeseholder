@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://dvvj6c7vrf2x6"]
+[gd_scene load_steps=9 format=3 uid="uid://dvvj6c7vrf2x6"]
 
 [ext_resource type="Script" path="res://scenes/minigame/arrow_minigame/main.gd" id="1_8q5gp"]
 [ext_resource type="PackedScene" uid="uid://bmlvhgamb0wl2" path="res://scenes/minigame/arrow_minigame/target/target.tscn" id="3_2uc0h"]
 [ext_resource type="TileSet" uid="uid://dbkce8eqbh8t0" path="res://resources/minigame/ground_tile_set.tres" id="3_o6ybw"]
 [ext_resource type="PackedScene" uid="uid://b3e8mnk1l7m8n" path="res://scenes/manager/ShapeSpawnManager.tscn" id="4_yaevg"]
 [ext_resource type="PackedScene" uid="uid://c3jyx01vllw3s" path="res://scenes/minigame/arrow_minigame/player/PlayerArrow.tscn" id="5_ejtwg"]
+[ext_resource type="PackedScene" uid="uid://1kjmf26xnjow" path="res://scenes/manager/transition/TransitionManager.tscn" id="5_jcaor"]
 [ext_resource type="PackedScene" uid="uid://dhkbwn2hhajvn" path="res://scenes/manager/ScoreManager.tscn" id="5_kykal"]
 [ext_resource type="PackedScene" uid="uid://tf30lhh8kui3" path="res://scenes/minigame/arrow_minigame/timer/TimeRemaining.tscn" id="6_4i5e3"]
 
@@ -17,6 +18,8 @@ script = ExtResource("1_8q5gp")
 shape = ExtResource("3_2uc0h")
 shape_bounds = NodePath("../ArenaBounds")
 spawn_time = 2.5
+
+[node name="TransitionManager" parent="." instance=ExtResource("5_jcaor")]
 
 [node name="ArenaBounds" type="ColorRect" parent="."]
 visible = false

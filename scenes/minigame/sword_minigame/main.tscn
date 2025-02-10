@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://c7g67fkdgu3fx"]
+[gd_scene load_steps=7 format=3 uid="uid://c7g67fkdgu3fx"]
 
 [ext_resource type="PackedScene" uid="uid://bnqotc4m3bhk6" path="res://scenes/minigame/sword_minigame/player_unit/PlayerUnit.tscn" id="1_3p1gu"]
 [ext_resource type="PackedScene" uid="uid://b3e8mnk1l7m8n" path="res://scenes/manager/ShapeSpawnManager.tscn" id="2_1wa0m"]
 [ext_resource type="PackedScene" uid="uid://cbjuhahf0vw1x" path="res://scenes/manager/ShapeBrokenManager.tscn" id="3_1hugj"]
 [ext_resource type="PackedScene" uid="uid://dqbjcmpm505mm" path="res://scenes/minigame/sword_minigame/target_shape/TargetShape.tscn" id="3_p8oy5"]
+[ext_resource type="PackedScene" uid="uid://1kjmf26xnjow" path="res://scenes/manager/transition/TransitionManager.tscn" id="4_oidgi"]
 [ext_resource type="PackedScene" uid="uid://btoj7x1kgfnop" path="res://scenes/manager/sword_score_manager.tscn" id="5_3q82k"]
 
 [node name="Main" type="Node2D"]
@@ -14,6 +15,8 @@ scale = Vector2(0.25, 0.25)
 [node name="ShapeSpawnManager" parent="." node_paths=PackedStringArray("shape_bounds") instance=ExtResource("2_1wa0m")]
 shape = ExtResource("3_p8oy5")
 shape_bounds = NodePath("../ColorRect")
+
+[node name="TransitionManager" parent="." instance=ExtResource("4_oidgi")]
 
 [node name="ShapeBrokenManager" parent="." instance=ExtResource("3_1hugj")]
 

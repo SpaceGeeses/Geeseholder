@@ -27,5 +27,3 @@ func uptick_score(type: String, amount: int):
 func show_final_score():
 	final_score.text = "You score " + str(player_score) + " points"
 	animation_player.play("pop_up_final")
-	await animation_player.animation_finished
-	GameEvents.scene_animation_finished.emit()
