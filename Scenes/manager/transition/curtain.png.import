@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cpeaufedwbjxc"
-path="res://.godot/imported/shards.png-b08252ed2e43e416a45a46aa7307c090.ctex"
+uid="uid://d2jnoamgktbba"
+path="res://.godot/imported/curtain.png-8e2c2905a1909e93d8e5b614d84d3ccf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/transition/shards.png"
-dest_files=["res://.godot/imported/shards.png-b08252ed2e43e416a45a46aa7307c090.ctex"]
+source_file="res://scenes/manager/transition/curtain.png"
+dest_files=["res://.godot/imported/curtain.png-8e2c2905a1909e93d8e5b614d84d3ccf.ctex"]
 
 [params]
 

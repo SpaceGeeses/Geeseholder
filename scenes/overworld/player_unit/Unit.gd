@@ -44,7 +44,7 @@ var _is_walking := false:
 		_is_walking = value
 		set_process(_is_walking)
 
-@onready var _sprite: Sprite2D = $PathFollow2D/Sprite
+@onready var _sprite: Sprite2D = $PathFollow2D/CharacterBody2D/Sprite
 @onready var _anim_player: AnimationPlayer = $AnimationPlayer
 @onready var _path_follow: PathFollow2D = $PathFollow2D
 
