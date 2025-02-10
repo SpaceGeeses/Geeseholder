@@ -1,8 +1,9 @@
 [gd_scene load_steps=10 format=3 uid="uid://btoj7x1kgfnop"]
 
-[ext_resource type="Script" path="res://scenes/manager/player_hit_correct.gd" id="1_ineug"]
-[ext_resource type="Script" path="res://scenes/manager/sword_score_manager.gd" id="1_loswn"]
-[ext_resource type="Script" path="res://scenes/manager/player_hit_incorrect.gd" id="2_c1c58"]
+[ext_resource type="Script" path="res://scenes/manager/sword_manager/player_hit_correct.gd" id="1_ineug"]
+[ext_resource type="Script" path="res://scenes/manager/sword_manager/sword_score_manager.gd" id="1_loswn"]
+[ext_resource type="Script" path="res://scenes/manager/sword_manager/player_hit_incorrect.gd" id="2_c1c58"]
+
 
 [sub_resource type="LabelSettings" id="LabelSettings_uwtef"]
 font_size = 82

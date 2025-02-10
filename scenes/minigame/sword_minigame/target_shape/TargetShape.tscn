@@ -42,7 +42,7 @@ _data = {
 "pop in": SubResource("Animation_ooeyx")
 }
 
-[node name="TargetShape" type="Node2D"]
+[node name="TargetShape" type="Node2D" groups=["shape"]]
 position = Vector2(0, -0.999969)
 scale = Vector2(16.2434, 13.5906)
 script = ExtResource("1_xccsf")
