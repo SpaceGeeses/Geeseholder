@@ -5,7 +5,6 @@
 [ext_resource type="PackedScene" uid="uid://bavjlap1ud7mh" path="res://scenes/minigame/sword_minigame/target_shape/possible_shapes/broken/RockBroken.tscn" id="3_d7pbk"]
 [ext_resource type="PackedScene" uid="uid://df8eiosrp72w4" path="res://scenes/minigame/sword_minigame/target_shape/possible_shapes/broken/StickBroken.tscn" id="4_yeb5t"]
 
-
 [node name="ShapeBrokenManager" type="Node"]
 script = ExtResource("1_5g86i")
 broken_bone = ExtResource("2_0fljr")
