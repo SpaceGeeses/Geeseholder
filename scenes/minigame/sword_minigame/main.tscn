@@ -14,17 +14,9 @@ script = ExtResource("1_gck6w")
 [node name="PlayerUnit" parent="." instance=ExtResource("1_3p1gu")]
 scale = Vector2(0.25, 0.25)
 
-[node name="ShapeSpawnManager" parent="." node_paths=PackedStringArray("shape_bounds") instance=ExtResource("2_1wa0m")]
+[node name="ShapeSpawnManager" parent="." instance=ExtResource("2_1wa0m")]
 shape = ExtResource("3_p8oy5")
-shape_bounds = NodePath("../ColorRect")
 
 [node name="ShapeBrokenManager" parent="." instance=ExtResource("3_1hugj")]
 
-[node name="SwordScoreManager" parent="." instance=ExtResource("5_8xy03")]
-
-[node name="ColorRect" type="ColorRect" parent="."]
-visible = false
-offset_right = 1403.0
-offset_bottom = 848.0
-
-[node name="TimeRemaining" parent="." instance=ExtResource("6_s67jj")]
+[node name="SwordScoreManager" parent="." instance=ExtResource("4_2wopi")]

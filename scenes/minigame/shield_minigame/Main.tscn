@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://bv5c3p3qlalps"]
 
-[ext_resource type="PackedScene" uid="uid://dhxddf1x3soyg" path="res://scenes/manager/ScoreManager.tscn" id="1_jtqba"]
+[ext_resource type="PackedScene" uid="uid://dhkbwn2hhajvn" path="res://scenes/manager/ScoreManager.tscn" id="1_jtqba"]
 [ext_resource type="TileSet" uid="uid://dbkce8eqbh8t0" path="res://resources/minigame/ground_tile_set.tres" id="2_1mnj4"]
 [ext_resource type="PackedScene" uid="uid://v8dmb4x5stns" path="res://scenes/minigame/shield_minigame/player/Player.tscn" id="3_8s75m"]
 [ext_resource type="PackedScene" uid="uid://le43kwu7tdic" path="res://scenes/minigame/shield_minigame/projectiles/projectiles.tscn" id="4_j24uj"]

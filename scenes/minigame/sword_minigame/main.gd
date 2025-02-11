@@ -1,6 +1,5 @@
 extends Node2D
 
-
 @onready var shape_spawn_manager = $ShapeSpawnManager
 
 
