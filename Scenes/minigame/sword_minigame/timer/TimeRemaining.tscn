@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://cchktipf3g67d"]
+
+[ext_resource type="Script" path="res://scenes/minigame/sword_minigame/timer/time_remaining.gd" id="1_6s7lg"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_nkwof"]
+font_size = 64
+
+[node name="TimeRemaining" type="Node2D"]
+script = ExtResource("1_6s7lg")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 628.0
+offset_right = 668.0
+offset_bottom = 23.0
+label_settings = SubResource("LabelSettings_nkwof")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 12.0
+one_shot = true
+autostart = true
