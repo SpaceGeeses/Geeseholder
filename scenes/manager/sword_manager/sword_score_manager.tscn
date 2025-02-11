@@ -4,7 +4,6 @@
 [ext_resource type="Script" path="res://scenes/manager/sword_manager/sword_score_manager.gd" id="1_loswn"]
 [ext_resource type="Script" path="res://scenes/manager/sword_manager/player_hit_incorrect.gd" id="2_c1c58"]
 
-
 [sub_resource type="LabelSettings" id="LabelSettings_uwtef"]
 font_size = 82
 font_color = Color(0.0717872, 0.219418, 0.550193, 1)
