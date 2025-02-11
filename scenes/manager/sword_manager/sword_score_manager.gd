@@ -8,11 +8,9 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	print("ready")
 	GameEvents.minigame_ended.connect(display_final_score)
 
 
 func display_final_score():
-	print("emitted")
 	final_score.text = "You score " + str(player_score.text) + " points"
 	animation_player.play("play_final_score")

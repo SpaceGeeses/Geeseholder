@@ -16,7 +16,6 @@ func _ready() -> void:
 
 
 func uptick_score(type: String, amount: int):
-	print("test")
 	if type == "enemy":
 		enemy_score += amount
 		enemy_score_label.text = str(enemy_score)

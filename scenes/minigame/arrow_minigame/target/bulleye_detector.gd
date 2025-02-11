@@ -13,7 +13,6 @@ var outer_factor = 0.8
 
 
 func _ready() -> void:
-	print("ready")
 	click_area.connect("input_event", on_target_clicked)
 	animation_player.play("scale_change")
 	await animation_player.animation_finished
