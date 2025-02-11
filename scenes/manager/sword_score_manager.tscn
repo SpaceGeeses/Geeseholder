@@ -1,7 +1,26 @@
-[gd_scene load_steps=5 format=3 uid="uid://btoj7x1kgfnop"]
+[gd_scene load_steps=6 format=3 uid="uid://dbuksm5kljiec"]
 
-[ext_resource type="Script" path="res://scenes/manager/player_hit_correct.gd" id="1_ineug"]
-[ext_resource type="Script" path="res://scenes/manager/player_hit_incorrect.gd" id="2_c1c58"]
+[ext_resource type="Script" path="res://scenes/manager/sword_manager/player_hit_correct.gd" id="1_ineug"]
+[ext_resource type="Script" path="res://scenes/manager/sword_manager/player_hit_incorrect.gd" id="2_c1c58"]
+
+[sub_resource type="GDScript" id="GDScript_ylk0r"]
+script/source = "extends Node2D
+
+@export var points_for: Label
+@export var points_against: Label
+@onready var final_score = $FinalScore
+@onready var animation_player: AnimationPlayer = $AnimationPlayer
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	GameEvents.final_score_player.connect(display_final_score)
+
+
+func display_final_score(player_points: int):
+	final_score.text = \"You score \" + str(player_points) + \" points\"
+	animation_player.play(\"play_final_score\")
+"
 
 [sub_resource type="LabelSettings" id="LabelSettings_uwtef"]
 font_size = 82
@@ -12,6 +31,7 @@ font_size = 82
 font_color = Color(0.934468, 0.143958, 0.268115, 1)
 
 [node name="SwordScoreManager" type="Node2D"]
+script = SubResource("GDScript_ylk0r")
 
 [node name="player_hit_correct" type="Node2D" parent="."]
 script = ExtResource("1_ineug")

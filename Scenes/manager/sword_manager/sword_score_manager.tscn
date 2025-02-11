@@ -1,0 +1,121 @@
+[gd_scene load_steps=10 format=3 uid="uid://btoj7x1kgfnop"]
+
+[ext_resource type="Script" path="res://scenes/manager/sword_manager/player_hit_correct.gd" id="1_ineug"]
+[ext_resource type="Script" path="res://scenes/manager/sword_manager/sword_score_manager.gd" id="1_loswn"]
+[ext_resource type="Script" path="res://scenes/manager/sword_manager/player_hit_incorrect.gd" id="2_c1c58"]
+
+
+[sub_resource type="LabelSettings" id="LabelSettings_uwtef"]
+font_size = 82
+font_color = Color(0.0717872, 0.219418, 0.550193, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_nw0ra"]
+font_size = 82
+font_color = Color(0.934468, 0.143958, 0.268115, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_1akiq"]
+line_spacing = 8.0
+font_size = 82
+font_color = Color(0.276463, 0.490122, 0.941461, 1)
+
+[sub_resource type="Animation" id="Animation_kt0wn"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("FinalScore:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("FinalScore:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_jwm47"]
+resource_name = "play_final_score"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("FinalScore:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(0.659754, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("FinalScore:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(0.732043, 1),
+"update": 0,
+"values": [-6.28319, 6.28319]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ujdsi"]
+_data = {
+"RESET": SubResource("Animation_kt0wn"),
+"play_final_score": SubResource("Animation_jwm47")
+}
+
+[node name="SwordScoreManager" type="Node2D" node_paths=PackedStringArray("points_for", "points_against")]
+script = ExtResource("1_loswn")
+points_for = NodePath("player_hit_correct/good_hit")
+points_against = NodePath("player_hit_incorrect/bad_hit")
+
+[node name="player_hit_correct" type="Node2D" parent="."]
+script = ExtResource("1_ineug")
+color = Color(0.0717872, 0.219418, 0.550193, 1)
+
+[node name="good_hit" type="Label" parent="player_hit_correct"]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "0
+"
+label_settings = SubResource("LabelSettings_uwtef")
+
+[node name="player_hit_incorrect" type="Node2D" parent="."]
+script = ExtResource("2_c1c58")
+
+[node name="bad_hit" type="Label" parent="player_hit_incorrect"]
+offset_left = 1350.0
+offset_top = 733.0
+offset_right = 1397.0
+offset_bottom = 846.0
+text = "0"
+label_settings = SubResource("LabelSettings_nw0ra")
+
+[node name="FinalScore" type="Label" parent="."]
+offset_left = 325.0
+offset_top = 383.0
+offset_right = 1075.0
+offset_bottom = 496.0
+pivot_offset = Vector2(373, 54)
+text = "
+"
+label_settings = SubResource("LabelSettings_1akiq")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_ujdsi")
+}
