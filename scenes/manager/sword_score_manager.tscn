@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://dbuksm5kljiec"]
+[gd_scene load_steps=6 format=3 uid="uid://dwp512uwqpsdn"]
 
 [ext_resource type="Script" path="res://scenes/manager/sword_manager/player_hit_correct.gd" id="1_ineug"]
 [ext_resource type="Script" path="res://scenes/manager/sword_manager/player_hit_incorrect.gd" id="2_c1c58"]
@@ -30,7 +30,7 @@ font_color = Color(0.0717872, 0.219418, 0.550193, 1)
 font_size = 82
 font_color = Color(0.934468, 0.143958, 0.268115, 1)
 
-[node name="SwordScoreManager" type="Node2D"]
+[node name="SwordScoreManager2" type="Node2D"]
 script = SubResource("GDScript_ylk0r")
 
 [node name="player_hit_correct" type="Node2D" parent="."]
