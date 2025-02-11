@@ -12,7 +12,6 @@ func _ready():
 
 
 func _on_timer_timeout():
-	print("spawn!")
 	var shape_instance: Node2D = shape.instantiate()
 	print(shape_instance)
 	var position = add_target_ran_location()
