@@ -1,8 +1,5 @@
 extends Area2D
 
-@onready var path_follow: PathFollow2D = $PathFollow2d
-@export var scene: PackedScene
-
 signal enemy_contact
 
 

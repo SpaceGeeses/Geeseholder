@@ -1,11 +1,11 @@
 [gd_scene load_steps=13 format=3 uid="uid://dsdoxyca5gmgi"]
 
-[ext_resource type="Shader" path="res://scenes/transition/Transition.gdshader" id="1_803qs"]
-[ext_resource type="PackedScene" uid="uid://ddx0ci82672h8" path="res://scenes/transition/Overlay.tscn" id="1_uevf7"]
-[ext_resource type="Texture2D" uid="uid://d2jnoamgktbba" path="res://scenes/transition/curtain.png" id="2_a4r3u"]
-[ext_resource type="Texture2D" uid="uid://cpeaufedwbjxc" path="res://scenes/transition/shards.png" id="2_vxs4f"]
-[ext_resource type="Script" path="res://scenes/transition/transition.gd" id="3_vl8bp"]
-[ext_resource type="Texture2D" uid="uid://c0r7c027hir57" path="res://scenes/transition/from_center.png" id="4_j16yl"]
+[ext_resource type="Shader" path="res://scenes/manager/transition/Transition.gdshader" id="1_803qs"]
+[ext_resource type="PackedScene" uid="uid://ddx0ci82672h8" path="res://scenes/manager/transition/Overlay.tscn" id="1_uevf7"]
+[ext_resource type="Texture2D" uid="uid://d2jnoamgktbba" path="res://scenes/manager/transition/curtain.png" id="2_a4r3u"]
+[ext_resource type="Texture2D" uid="uid://cpeaufedwbjxc" path="res://scenes/manager/transition/shards.png" id="2_vxs4f"]
+[ext_resource type="Script" path="res://scenes/manager/transition/transition.gd" id="3_vl8bp"]
+[ext_resource type="Texture2D" uid="uid://c0r7c027hir57" path="res://scenes/manager/transition/from_center.png" id="4_j16yl"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_phrhp"]
 shader = ExtResource("1_803qs")
@@ -151,8 +151,8 @@ script = ExtResource("3_vl8bp")
 
 [node name="TextureRect" parent="MarginContainer/Transition" instance=ExtResource("1_uevf7")]
 layout_mode = 2
-offset_right = 1152.0
-offset_bottom = 648.0
+offset_right = 1402.0
+offset_bottom = 845.0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="MarginContainer/Transition"]
 libraries = {

@@ -1,15 +1,17 @@
-[gd_scene load_steps=7 format=3 uid="uid://bv5c3p3qlalps"]
+[gd_scene load_steps=9 format=3 uid="uid://bv5c3p3qlalps"]
 
 [ext_resource type="PackedScene" uid="uid://dhkbwn2hhajvn" path="res://scenes/manager/ScoreManager.tscn" id="1_jtqba"]
+[ext_resource type="Script" path="res://scenes/minigame/shield_minigame/main.gd" id="1_ognul"]
 [ext_resource type="TileSet" uid="uid://dbkce8eqbh8t0" path="res://resources/minigame/ground_tile_set.tres" id="2_1mnj4"]
 [ext_resource type="PackedScene" uid="uid://v8dmb4x5stns" path="res://scenes/minigame/shield_minigame/player/Player.tscn" id="3_8s75m"]
+[ext_resource type="PackedScene" uid="uid://1kjmf26xnjow" path="res://scenes/manager/transition/TransitionManager.tscn" id="3_d6n6r"]
 [ext_resource type="PackedScene" uid="uid://le43kwu7tdic" path="res://scenes/minigame/shield_minigame/projectiles/projectiles.tscn" id="4_j24uj"]
 [ext_resource type="PackedScene" uid="uid://dlv7hj5dtcv0x" path="res://scenes/minigame/shield_minigame/scorebox/enemy_score.tscn" id="5_d124c"]
 [ext_resource type="PackedScene" uid="uid://d1xcwdwasmrit" path="res://scenes/minigame/shield_minigame/Borders.tscn" id="6_0uahe"]
 
 [node name="Mini-game" type="Node"]
-
-[node name="ScoreManager" parent="." instance=ExtResource("1_jtqba")]
+script = ExtResource("1_ognul")
+transition_manager = ExtResource("3_d6n6r")
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(145, 75)
@@ -30,3 +32,5 @@ position = Vector2(137, 82)
 
 [node name="Borders" parent="." instance=ExtResource("6_0uahe")]
 position = Vector2(-2, 2)
+
+[node name="ScoreManager" parent="." instance=ExtResource("1_jtqba")]

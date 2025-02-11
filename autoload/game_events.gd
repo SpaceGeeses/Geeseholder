@@ -1,6 +1,8 @@
 extends Node
 
 signal scene_changed
+signal scene_animation_finished
+
 signal score_increase
 signal target_hit
 signal shape_broken

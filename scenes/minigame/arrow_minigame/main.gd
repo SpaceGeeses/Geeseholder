@@ -9,4 +9,5 @@ func _ready() -> void:
 
 func transition_scene():
 	shape_spawn_manager.queue_free()
-	# code here to switch scenes
+	await get_tree().create_timer(1).timeout
+	GameEvents.emit_scene_changed()

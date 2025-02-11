@@ -1,15 +1,20 @@
-[gd_scene load_steps=11 format=3 uid="uid://dspeinx0iiuwl"]
+[gd_scene load_steps=16 format=3 uid="uid://dspeinx0iiuwl"]
 
 [ext_resource type="Script" path="res://scenes/overworld/Board.gd" id="1_836kg"]
 [ext_resource type="Resource" uid="uid://bnkf7n0i8dhfi" path="res://resources/overworld/grid/Grid.tres" id="2_x6d36"]
 [ext_resource type="PackedScene" uid="uid://cig835mmr5m8m" path="res://scenes/overworld/overlay_grid/OverlayGrid.tscn" id="3_4dghd"]
+[ext_resource type="TileSet" uid="uid://mlnxqalkyhi5" path="res://assets/environment/background.tres" id="4_n2ksu"]
 [ext_resource type="PackedScene" uid="uid://b6wx7veugxvb3" path="res://scenes/overworld/cursor/cursor.tscn" id="5_kqsrf"]
 [ext_resource type="PackedScene" uid="uid://n825j345khoi" path="res://scenes/overworld/player_unit/overlay/UnitOverlay.tscn" id="6_3i17a"]
 [ext_resource type="PackedScene" uid="uid://dns2rmh1vgexy" path="res://scenes/overworld/player_unit/UnitPath.tscn" id="7_ujtc4"]
 [ext_resource type="PackedScene" uid="uid://bl451jb7lr2us" path="res://scenes/overworld/camera/Camera.tscn" id="9_wxrvg"]
 [ext_resource type="PackedScene" uid="uid://c0a823kyqiwvb" path="res://scenes/overworld/enemy/Enemy.tscn" id="10_0cfe5"]
-[ext_resource type="PackedScene" uid="uid://1kjmf26xnjow" path="res://scenes/manager/transition/TransitionManager.tscn" id="10_b3533"]
 [ext_resource type="PackedScene" uid="uid://bo6mute7ubylf" path="res://scenes/overworld/player_unit/Unit.tscn" id="10_v4nm7"]
+[ext_resource type="PackedScene" uid="uid://1kjmf26xnjow" path="res://scenes/manager/transition/TransitionManager.tscn" id="12_5okhw"]
+[ext_resource type="PackedScene" uid="uid://dsdoxyca5gmgi" path="res://scenes/manager/transition/Transition.tscn" id="12_517ka"]
+[ext_resource type="PackedScene" uid="uid://c7g67fkdgu3fx" path="res://scenes/minigame/sword_minigame/main.tscn" id="13_ts8sy"]
+[ext_resource type="PackedScene" uid="uid://bv5c3p3qlalps" path="res://scenes/minigame/shield_minigame/Main.tscn" id="14_bn6kb"]
+[ext_resource type="PackedScene" uid="uid://dvvj6c7vrf2x6" path="res://scenes/minigame/arrow_minigame/Main.tscn" id="15_bng4b"]
 
 [node name="Board" type="Node2D"]
 script = ExtResource("1_836kg")
@@ -26,6 +31,10 @@ position = Vector2(0, 0)
 
 [node name="Camera2D" parent="." instance=ExtResource("9_wxrvg")]
 
+[node name="Background" type="TileMap" parent="."]
+tile_set = ExtResource("4_n2ksu")
+format = 2
+
 [node name="Enemy" parent="." instance=ExtResource("10_0cfe5")]
 position = Vector2(66, 3)
 
@@ -33,7 +42,10 @@ position = Vector2(66, 3)
 
 [node name="RigidBody2D" type="RigidBody2D" parent="."]
 
-[node name="TransitionManager" parent="." instance=ExtResource("10_b3533")]
+[node name="TransitionManager" parent="." node_paths=PackedStringArray("camera") instance=ExtResource("12_5okhw")]
+transition_scene = ExtResource("12_517ka")
+camera = NodePath("../Camera2D")
+target_scene = Array[PackedScene]([ExtResource("13_ts8sy"), ExtResource("14_bn6kb"), ExtResource("15_bng4b")])
 
 [connection signal="accept_pressed" from="Cursor" to="." method="_on_Cursor_accept_pressed"]
 [connection signal="moved" from="Cursor" to="." method="_on_Cursor_moved"]
