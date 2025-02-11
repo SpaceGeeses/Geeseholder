@@ -11,7 +11,13 @@ config_version=5
 [application]
 
 config/name="Geeseholder"
+<<<<<<< HEAD
 run/main_scene="res://scenes/overworld/Board.tscn"
+||||||| 587e2b8
+run/main_scene="res://scenes/minigame/sword_minigame/main.tscn"
+=======
+run/main_scene="res://scenes/minigame/shield_minigame/Main.tscn"
+>>>>>>> main
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 <<<<<<<HEADrun/main_scene="res://scenes/minigame/engaging/Engaging.tscn"
