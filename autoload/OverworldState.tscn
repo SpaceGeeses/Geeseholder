@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bqe1psec1oty3"]
+
+[ext_resource type="Script" path="res://autoload/overworld_state.gd" id="1_idndm"]
+
+[node name="OverworldState" type="Node"]
+script = ExtResource("1_idndm")
