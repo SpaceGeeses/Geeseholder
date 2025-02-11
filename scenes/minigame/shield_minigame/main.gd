@@ -1,10 +1,7 @@
 extends Node
 
-@export var transition_manager: PackedScene
-
 
 func _ready() -> void:
-	add_child(transition_manager.instantiate())
 	GameEvents.score_increase.connect(check_game_ended)
 
 

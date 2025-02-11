@@ -1,36 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://dhkbwn2hhajvn"]
 
-[sub_resource type="GDScript" id="GDScript_yaamk"]
-script/source = "extends Node
-
-@onready var player_score_label: Label = $PlayerScore
-@onready var enemy_score_label: Label = $EnemyScore
-@onready var animation_player: AnimationPlayer = $AnimationPlayer
-@onready var final_score: Label = $FinalScore
-
-var enemy_score = 0
-var player_score = 0
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	GameEvents.score_increase.connect(uptick_score)
-	GameEvents.minigame_ended.connect(show_final_score)
-
-
-func uptick_score(type: String, amount: int):
-	if type == \"enemy\":
-		enemy_score += amount
-		enemy_score_label.text = str(enemy_score)
-	elif type == \"player\":
-		player_score += amount
-		player_score_label.text = str(player_score)
-
-
-func show_final_score():
-	final_score.text = \"You score \" + str(player_score) + \" points\"
-	animation_player.play(\"pop_up_final\")
-"
+[ext_resource type="Script" path="res://scenes/manager/score_manager.gd" id="1_sno4e"]
 
 [sub_resource type="Animation" id="Animation_cdhj2"]
 length = 0.001
@@ -93,7 +63,7 @@ _data = {
 }
 
 [node name="ScoreManager" type="Node"]
-script = SubResource("GDScript_yaamk")
+script = ExtResource("1_sno4e")
 
 [node name="PlayerScore" type="Label" parent="."]
 z_index = 1

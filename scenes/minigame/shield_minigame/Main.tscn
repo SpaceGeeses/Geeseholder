@@ -11,7 +11,6 @@
 
 [node name="Mini-game" type="Node"]
 script = ExtResource("1_ognul")
-transition_manager = ExtResource("3_d6n6r")
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(145, 75)
@@ -32,5 +31,7 @@ position = Vector2(137, 82)
 
 [node name="Borders" parent="." instance=ExtResource("6_0uahe")]
 position = Vector2(-2, 2)
+
+[node name="TransitionManager" parent="." instance=ExtResource("3_d6n6r")]
 
 [node name="ScoreManager" parent="." instance=ExtResource("1_jtqba")]
