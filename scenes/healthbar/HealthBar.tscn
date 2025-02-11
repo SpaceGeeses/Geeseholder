@@ -1,0 +1,84 @@
+[gd_scene load_steps=3 format=3 uid="uid://cvnu4t8lbl72t"]
+
+[ext_resource type="Script" path="res://scenes/healthbar/health_bar.gd" id="1_1urcf"]
+[ext_resource type="PackedScene" uid="uid://dyhcow3co4ba5" path="res://scenes/healthbar/HealthChunk.tscn" id="1_eyuql"]
+
+[node name="HealthBar" type="Node2D"]
+position = Vector2(19, 16)
+script = ExtResource("1_1urcf")
+
+[node name="background" type="ColorRect" parent="."]
+offset_right = 514.0
+offset_bottom = 24.0
+color = Color(0.743806, 0.481415, 0.051339, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+
+[node name="chunk_grouping" type="Node2D" parent="."]
+
+[node name="HealthChunk" parent="chunk_grouping" groups=["health_chunk"] instance=ExtResource("1_eyuql")]
+z_index = 1
+position = Vector2(2, 2)
+
+[node name="HealthChunk2" parent="chunk_grouping" groups=["health_chunk"] instance=ExtResource("1_eyuql")]
+z_index = 1
+position = Vector2(34, 2)
+
+[node name="HealthChunk3" parent="chunk_grouping" groups=["health_chunk"] instance=ExtResource("1_eyuql")]
+z_index = 1
+position = Vector2(66, 2)
+
+[node name="HealthChunk4" parent="chunk_grouping" groups=["health_chunk"] instance=ExtResource("1_eyuql")]
+z_index = 1
+position = Vector2(98, 2)
+
+[node name="HealthChunk5" parent="chunk_grouping" groups=["health_chunk"] instance=ExtResource("1_eyuql")]
+z_index = 1
+position = Vector2(130, 2)
+
+[node name="HealthChunk6" parent="chunk_grouping" groups=["health_chunk"] instance=ExtResource("1_eyuql")]
+z_index = 1
+position = Vector2(162, 2)
+
+[node name="HealthChunk7" parent="chunk_grouping" groups=["health_chunk"] instance=ExtResource("1_eyuql")]
+z_index = 1
+position = Vector2(194, 2)
+
+[node name="HealthChunk8" parent="chunk_grouping" groups=["health_chunk"] instance=ExtResource("1_eyuql")]
+z_index = 1
+position = Vector2(226, 2)
+
+[node name="HealthChunk9" parent="chunk_grouping" groups=["health_chunk"] instance=ExtResource("1_eyuql")]
+z_index = 1
+position = Vector2(258, 2)
+
+[node name="HealthChunk10" parent="chunk_grouping" groups=["health_chunk"] instance=ExtResource("1_eyuql")]
+z_index = 1
+position = Vector2(290, 2)
+
+[node name="HealthChunk11" parent="chunk_grouping" groups=["health_chunk"] instance=ExtResource("1_eyuql")]
+z_index = 1
+position = Vector2(322, 2)
+
+[node name="HealthChunk12" parent="chunk_grouping" groups=["health_chunk"] instance=ExtResource("1_eyuql")]
+z_index = 1
+position = Vector2(354, 2)
+
+[node name="HealthChunk13" parent="chunk_grouping" groups=["health_chunk"] instance=ExtResource("1_eyuql")]
+z_index = 1
+position = Vector2(386, 2)
+
+[node name="HealthChunk14" parent="chunk_grouping" groups=["health_chunk"] instance=ExtResource("1_eyuql")]
+z_index = 1
+position = Vector2(418, 2)
+
+[node name="HealthChunk15" parent="chunk_grouping" groups=["health_chunk"] instance=ExtResource("1_eyuql")]
+z_index = 1
+position = Vector2(450, 2)
+
+[node name="HealthChunk16" parent="chunk_grouping" groups=["health_chunk"] instance=ExtResource("1_eyuql")]
+z_index = 1
+position = Vector2(482, 2)

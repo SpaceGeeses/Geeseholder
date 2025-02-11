@@ -5,6 +5,7 @@ signal score_increase
 signal target_hit
 signal shape_broken
 signal minigame_ended
+signal delete_health(desiredIndex: int)
 
 
 func emit_scene_changed():

@@ -7,4 +7,4 @@ func _ready() -> void:
 
 func on_area_entered(other_area: Area2D):
 	other_area.get_parent().queue_free()
-	GameEvents.emit_score_increase("enemy")
+	GameEvents.emit_score_increase("enemy", 1)
