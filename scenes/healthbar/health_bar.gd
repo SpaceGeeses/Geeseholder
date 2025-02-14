@@ -14,16 +14,16 @@ func _ready() -> void:
 		var child = children[i]
 		if (i >= current_health):
 			child.queue_free()
-	delete_health_chunks()
-	
+
 
 func delete_health_chunks():
-	if times_ran >= times_to_run:
-		timer.stop()
-		return
-	GameEvents.delete_health.emit(choose_child())
-	times_ran += 1
-	OverworldState.player_health -= 1
+		if times_ran >= times_to_run:
+			timer.stop()
+			return
+		GameEvents.delete_health.emit(choose_child())
+		times_ran += 1
+		OverworldState.player_health -= 1
+		print("yoyoyo")
 	
 
 func choose_child():
