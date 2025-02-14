@@ -23,8 +23,7 @@ func delete_health_chunks():
 		GameEvents.delete_health.emit(choose_child())
 		times_ran += 1
 		OverworldState.player_health -= 1
-		print("yoyoyo")
 	
 
 func choose_child():
-	return children.size() - 1
+	return get_tree().get_node_count_in_group("health_chunk") - 1
