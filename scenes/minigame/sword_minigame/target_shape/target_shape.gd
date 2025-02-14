@@ -15,3 +15,8 @@ func _ready() -> void:
 	add_child(selected_shape)
 	animation_player.play("pop in")
 	selected_shape.visible = true
+	await animation_player.animation_finished
+	if selected_shape.name != "Rock":
+		print("not rock")
+		GameEvents.emit_score_increase("enemy")
+	queue_free()

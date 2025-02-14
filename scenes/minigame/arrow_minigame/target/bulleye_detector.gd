@@ -1,9 +1,10 @@
 extends Sprite2D
 
-@export var score: int = 0
+var despawn_timer = 5
+
+var score: int = 0
 var hit: int = 0
 var isHit: bool = false
-
 var bullseye_factor = 0.2
 var middle_factor = 0.5
 var outer_factor = 0.8
@@ -14,8 +15,14 @@ var outer_factor = 0.8
 
 func _ready() -> void:
 	click_area.connect("input_event", on_target_clicked)
-	animation_player.play("scale_change")
+	var despawn_time = OverworldState.calculate_frequeuncy(despawn_timer)
+	animation_player.play("spawn")
 	await animation_player.animation_finished
+	await get_tree().create_timer(despawn_time).timeout
+	animation_player.play("despawn")
+	await animation_player.animation_finished
+	if isHit == false:
+		GameEvents.emit_score_increase("enemy")
 	queue_free()
 
 

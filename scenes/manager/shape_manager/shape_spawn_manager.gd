@@ -7,8 +7,8 @@ extends Node
 
 
 func _ready():
+	timer.wait_time = OverworldState.calculate_frequeuncy(spawn_time, 0.1)
 	timer.timeout.connect(_on_timer_timeout)
-	timer.wait_time = spawn_time
 
 
 func _on_timer_timeout():
