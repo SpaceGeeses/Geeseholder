@@ -13,3 +13,4 @@ func uptick_score_on_break(area: Area2D):
 	if type == 'Rock':
 		enemy_score += 1
 	label.text = str(enemy_score)
+	OverworldState.enemy_score += 1

@@ -5,6 +5,8 @@ extends Node2D
 
 func _ready() -> void:
 	GameEvents.minigame_ended.connect(transition_scene)
+	OverworldState.player_points = 0
+	OverworldState.enemy_points = 0
 
 
 func transition_scene():

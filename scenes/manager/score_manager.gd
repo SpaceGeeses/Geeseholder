@@ -19,9 +19,11 @@ func uptick_score(type: String, amount: int):
 	if type == "enemy":
 		enemy_score += amount
 		enemy_score_label.text = str(enemy_score)
+		OverworldState.player_points += 1
 	elif type == "player":
 		player_score += amount
 		player_score_label.text = str(player_score)
+		OverworldState.enemy_points += 1
 
 
 func show_final_score():

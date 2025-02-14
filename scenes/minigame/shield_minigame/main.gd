@@ -3,6 +3,8 @@ extends Node
 
 func _ready() -> void:
 	GameEvents.score_increase.connect(check_game_ended)
+	OverworldState.player_points = 0
+	OverworldState.enemy_points = 0
 
 
 func check_game_ended(_type: String, _amount: int):

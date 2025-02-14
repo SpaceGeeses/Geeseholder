@@ -1,10 +1,11 @@
-[gd_scene load_steps=12 format=3 uid="uid://bo6mute7ubylf"]
+[gd_scene load_steps=13 format=3 uid="uid://bo6mute7ubylf"]
 
 [ext_resource type="Script" path="res://scenes/overworld/player_unit/Unit.gd" id="1_yx4ks"]
 [ext_resource type="Resource" uid="uid://bnkf7n0i8dhfi" path="res://resources/overworld/grid/Grid.tres" id="2_hobpf"]
 [ext_resource type="Script" path="res://scenes/overworld/player_unit/HurtBox.gd" id="3_mmt6u"]
 [ext_resource type="Texture2D" uid="uid://d1r7kbf67s8cn" path="res://resources/characters/sword/sword_shadow.svg" id="4_5jw3b"]
 [ext_resource type="Texture2D" uid="uid://2cey12hfxtqa" path="res://resources/characters/sword/sword.png" id="5_jr3x2"]
+[ext_resource type="PackedScene" uid="uid://cvnu4t8lbl72t" path="res://scenes/healthbar/HealthBar.tscn" id="6_3rau6"]
 
 [sub_resource type="Animation" id="Animation_mp445"]
 length = 3.0
@@ -239,6 +240,7 @@ _data = {
 size = Vector2(32, 32)
 
 [node name="Unit" type="Path2D"]
+position = Vector2(75, 110)
 script = ExtResource("1_yx4ks")
 grid = ExtResource("2_hobpf")
 
@@ -270,3 +272,7 @@ offset = Vector2(0, -240)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PathFollow2D/CharacterBody2D"]
 position = Vector2(-9, -8)
 shape = SubResource("RectangleShape2D_sro2t")
+
+[node name="HealthBar" parent="PathFollow2D/CharacterBody2D" instance=ExtResource("6_3rau6")]
+position = Vector2(-54, -106)
+scale = Vector2(0.2, 0.2)
