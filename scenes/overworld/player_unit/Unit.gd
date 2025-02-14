@@ -55,7 +55,7 @@ func _ready() -> void:
 	set_process(false)
 	_path_follow.rotates = false
 
-	cell = grid.calculate_grid_coordinates(position)
+	cell = OverworldState.player_coordinates
 	position = grid.calculate_map_position(cell)
 
 	if not Engine.is_editor_hint():
@@ -94,4 +94,6 @@ func enemy_contact(enemy: Area2D):
 	_is_walking = false
 	animation_player.play("swing")
 	enemy.get_parent().queue_free()
+	OverworldState.set_player_coordinates(cell)
+	print(OverworldState.player_coordinates)
 	GameEvents.emit_scene_changed()
