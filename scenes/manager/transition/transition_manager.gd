@@ -9,6 +9,7 @@ var minigame_paths = [
 	"res://scenes/minigame/arrow_minigame/Main.tscn"
 ]
 var board_path = "res://scenes/overworld/Board.tscn"
+var start_menu_path = "res://scenes/ui/main_menu/MainMenu.tscn"
 
 var tween: Tween
 
@@ -17,6 +18,7 @@ var zoom_duration: float = 0.5
 
 
 func _ready():
+	GameEvents.start_game.connect(play_scene_animation)
 	GameEvents.scene_changed.connect(play_scene_animation)
 	GameEvents.scene_animation_finished.connect(on_scene_animation_finish)
 
