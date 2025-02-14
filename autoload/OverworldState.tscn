@@ -4,3 +4,6 @@
 
 [node name="OverworldState" type="Node"]
 script = ExtResource("1_idndm")
+min_spawn = 2
+max_spawn = 19
+enemy_count = 15

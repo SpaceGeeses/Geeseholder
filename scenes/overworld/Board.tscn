@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dspeinx0iiuwl"]
+[gd_scene load_steps=11 format=3 uid="uid://dspeinx0iiuwl"]
 
 [ext_resource type="Script" path="res://scenes/overworld/Board.gd" id="1_836kg"]
 [ext_resource type="Resource" uid="uid://bnkf7n0i8dhfi" path="res://resources/overworld/grid/Grid.tres" id="2_x6d36"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://n825j345khoi" path="res://scenes/overworld/player_unit/overlay/UnitOverlay.tscn" id="6_3i17a"]
 [ext_resource type="PackedScene" uid="uid://dns2rmh1vgexy" path="res://scenes/overworld/player_unit/UnitPath.tscn" id="7_ujtc4"]
 [ext_resource type="PackedScene" uid="uid://bl451jb7lr2us" path="res://scenes/overworld/camera/Camera.tscn" id="9_wxrvg"]
+[ext_resource type="PackedScene" uid="uid://c0a823kyqiwvb" path="res://scenes/overworld/enemy/Enemy.tscn" id="10_0cfe5"]
 [ext_resource type="PackedScene" uid="uid://1kjmf26xnjow" path="res://scenes/manager/transition/TransitionManager.tscn" id="10_b3533"]
 [ext_resource type="PackedScene" uid="uid://bo6mute7ubylf" path="res://scenes/overworld/player_unit/Unit.tscn" id="10_v4nm7"]
 
@@ -14,6 +15,7 @@
 position = Vector2(0, -1)
 script = ExtResource("1_836kg")
 grid = ExtResource("2_x6d36")
+enemy_scene = ExtResource("10_0cfe5")
 
 [node name="OverlayGrid" parent="." instance=ExtResource("3_4dghd")]
 

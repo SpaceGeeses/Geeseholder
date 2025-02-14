@@ -94,6 +94,6 @@ func enemy_contact(enemy: Area2D):
 	_is_walking = false
 	animation_player.play("swing")
 	enemy.get_parent().queue_free()
+	OverworldState.remove_enemy_spawn(cell)
 	OverworldState.set_player_coordinates(cell)
-	print(OverworldState.player_coordinates)
 	GameEvents.emit_scene_changed()
