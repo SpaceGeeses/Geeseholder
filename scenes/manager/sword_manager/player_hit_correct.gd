@@ -16,3 +16,4 @@ func uptick_score_on_break(area: Area2D):
 	elif type == 'Stick':
 		player_score += 1
 	label.text = str(player_score)
+	OverworldState.player_points += 1

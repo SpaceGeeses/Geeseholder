@@ -1,6 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://dhkbwn2hhajvn"]
+[gd_scene load_steps=6 format=3 uid="uid://dhkbwn2hhajvn"]
 
 [ext_resource type="Script" path="res://scenes/manager/score_manager.gd" id="1_sno4e"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_a2kt3"]
+font_size = 82
+font_color = Color(0.27451, 0.490196, 0.941176, 1)
 
 [sub_resource type="Animation" id="Animation_cdhj2"]
 length = 0.001
@@ -91,11 +95,20 @@ vertical_alignment = 1
 
 [node name="FinalScore" type="Label" parent="."]
 z_index = 1
-offset_left = 617.0
-offset_top = 401.0
-offset_right = 618.0
-offset_bottom = 424.0
-pivot_offset = Vector2(0.554749, 11.2501)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -375.0
+offset_top = -56.5
+offset_right = 375.0
+offset_bottom = 56.5
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(386, 59.5)
+size_flags_horizontal = 4
+label_settings = SubResource("LabelSettings_a2kt3")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

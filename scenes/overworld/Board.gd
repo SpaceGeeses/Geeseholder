@@ -8,6 +8,7 @@ const DIRECTIONS = [Vector2.LEFT, Vector2.RIGHT, Vector2.UP, Vector2.DOWN]
 
 ## Resource of type Grid.
 @export var grid: Resource
+@export var enemy_scene: PackedScene
 
 ## Mapping of coordinates of a cell to a reference to the unit it contains.
 var _units := {}
@@ -48,6 +49,7 @@ func get_walkable_cells(unit: Unit) -> Array:
 
 ## Clears, and refills the `_units` dictionary with game objects that are on the board.
 func _reinitialize() -> void:
+	spawn_enemies()
 	_units.clear()
 
 	for child in get_children():
@@ -55,6 +57,13 @@ func _reinitialize() -> void:
 		if not unit:
 			continue
 		_units[unit.cell] = unit
+
+
+func spawn_enemies() -> void:
+	for enemy_position: Vector2 in OverworldState.enemy_coordinates:
+		var new_enemy = enemy_scene.instantiate()
+		new_enemy.position = enemy_position * 64
+		add_child(new_enemy)
 
 
 ## Returns an array with all the coordinates of walkable cells based on the `max_distance`.

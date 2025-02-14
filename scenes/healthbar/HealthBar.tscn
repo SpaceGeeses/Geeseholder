@@ -14,7 +14,7 @@ color = Color(0.743806, 0.481415, 0.051339, 1)
 metadata/_edit_use_anchors_ = true
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 2.0
+wait_time = 1.5
 autostart = true
 
 [node name="chunk_grouping" type="Node2D" parent="."]
