@@ -49,7 +49,6 @@ func get_walkable_cells(unit: Unit) -> Array:
 
 ## Clears, and refills the `_units` dictionary with game objects that are on the board.
 func _reinitialize() -> void:
-	print("test")
 	spawn_enemies()
 	_units.clear()
 
@@ -61,11 +60,9 @@ func _reinitialize() -> void:
 
 
 func spawn_enemies() -> void:
-	print(OverworldState.enemy_coordinates)
 	for enemy_position: Vector2 in OverworldState.enemy_coordinates:
 		var new_enemy = enemy_scene.instantiate()
 		new_enemy.position = enemy_position * 64
-		print("spawning enemy at", enemy_position)
 		add_child(new_enemy)
 
 

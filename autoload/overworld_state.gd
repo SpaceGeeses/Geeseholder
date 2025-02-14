@@ -32,5 +32,3 @@ func remove_enemy_spawn(cell: Vector2):
 	var enemy_spawn_index = enemy_coordinates.find(cell)
 	if enemy_spawn_index != -1:
 		enemy_coordinates.remove_at(enemy_spawn_index)
-	else:
-		print("no enemy")
