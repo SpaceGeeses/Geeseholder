@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://dspeinx0iiuwl"]
+[gd_scene load_steps=14 format=3 uid="uid://dspeinx0iiuwl"]
 
 [ext_resource type="Script" path="res://scenes/overworld/Board.gd" id="1_836kg"]
 [ext_resource type="Resource" uid="uid://bnkf7n0i8dhfi" path="res://resources/overworld/grid/Grid.tres" id="2_x6d36"]
@@ -11,6 +11,8 @@
 [ext_resource type="PackedScene" uid="uid://1kjmf26xnjow" path="res://scenes/manager/transition/TransitionManager.tscn" id="10_b3533"]
 [ext_resource type="PackedScene" uid="uid://bo6mute7ubylf" path="res://scenes/overworld/player_unit/Unit.tscn" id="10_v4nm7"]
 [ext_resource type="TileSet" uid="uid://mlnxqalkyhi5" path="res://assets/environment/background.tres" id="11_smmt3"]
+[ext_resource type="Script" path="res://scenes/overworld/total_player_score.gd" id="12_46a4l"]
+[ext_resource type="PackedScene" uid="uid://cfvihofxg0pkl" path="res://scenes/ui/restart/Restart.tscn" id="13_8i1t4"]
 
 [node name="Board" type="Node2D"]
 position = Vector2(0, -1)
@@ -40,6 +42,20 @@ position = Vector2(0, 0)
 [node name="RigidBody2D" type="RigidBody2D" parent="."]
 
 [node name="TransitionManager" parent="." instance=ExtResource("10_b3533")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TotalPlayerScore" type="Label" parent="CanvasLayer"]
+offset_top = -1.0
+offset_right = 95.0
+offset_bottom = 22.0
+text = "
+
+"
+script = ExtResource("12_46a4l")
+
+[node name="Restart" parent="." instance=ExtResource("13_8i1t4")]
+visible = false
 
 [connection signal="accept_pressed" from="Cursor" to="." method="_on_Cursor_accept_pressed"]
 [connection signal="moved" from="Cursor" to="." method="_on_Cursor_moved"]

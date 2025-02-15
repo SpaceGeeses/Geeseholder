@@ -10,6 +10,7 @@ var player_health: int = 16
 var player_points: int = 0
 var enemy_points: int = 0
 var difficulty: int = 4000
+var player_score: int = 0
 
 
 func _ready() -> void:

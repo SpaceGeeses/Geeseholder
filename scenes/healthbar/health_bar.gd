@@ -26,4 +26,7 @@ func delete_health_chunks():
 	
 
 func choose_child():
-	return get_tree().get_node_count_in_group("health_chunk") - 1
+	var number = get_tree().get_node_count_in_group("health_chunk") - 1
+	if (number == 0):
+		GameEvents.game_ended.emit()
+	return number

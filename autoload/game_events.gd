@@ -8,7 +8,7 @@ signal target_hit
 signal shape_broken
 signal minigame_ended
 signal delete_health(desiredIndex: int)
-
+signal game_ended
 
 func emit_scene_changed():
 	scene_changed.emit()
