@@ -12,5 +12,5 @@ func uptick_score_on_break(area: Area2D):
 	var type = area.get_groups()[0]
 	if type == 'Rock':
 		enemy_score += 1
+		OverworldState.enemy_points += 1
 	label.text = str(enemy_score)
-	OverworldState.enemy_points += 1

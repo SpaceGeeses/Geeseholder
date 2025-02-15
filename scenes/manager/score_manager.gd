@@ -24,6 +24,7 @@ func uptick_score(type: String, amount: int):
 		player_score += amount
 		player_score_label.text = str(player_score)
 		OverworldState.player_points += 1
+		OverworldState.player_score += 1
 
 
 func show_final_score():
