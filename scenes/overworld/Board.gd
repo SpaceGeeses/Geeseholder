@@ -20,6 +20,7 @@ var _walkable_cells := []
 
 
 func _ready() -> void:
+	OverworldState.current_scene = "overworld"
 	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 	_reinitialize()
 

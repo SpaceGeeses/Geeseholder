@@ -18,7 +18,9 @@ func on_restart_pressed():
 	visible = false
 	GameEvents.start_game.emit()
 
+
 func finish_game():
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	visible = true
-	var total_points = str(OverworldState.player_points)
+	var total_points = str(OverworldState.player_score)
 	total_score.text = "Total Score: " + total_points

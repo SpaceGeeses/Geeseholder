@@ -34,7 +34,8 @@ func play_scene_animation():
 
 
 func on_scene_animation_finish():
-	if get_parent().name == "Board":
+	if OverworldState.current_scene == "overworld":
+		OverworldState.current_scene = "minigame"
 		get_tree().change_scene_to_file(minigame_paths.pick_random())
 	else:
 		get_tree().change_scene_to_file(board_path)

@@ -3,11 +3,14 @@ extends Node2D
 @export var parent: Node
 @export var speed_modifier: int = 200
 @onready var pivot_point = $PivotPoint
+var spawn_time = 5
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	var timer = $Timer
+	timer.wait_time = OverworldState.calculate_frequeuncy(spawn_time, 0.3)
+	print(timer.wait_time)
 	timer.timeout.connect(_on_timer_timeout)
 
 
@@ -25,7 +28,7 @@ func choose_random_child():
 			random_child.position.x + speed_modifier, random_child.position.y + speed_modifier
 		)
 		random_child.reparent(parent)
-		
+
 	else:
 		return null
 

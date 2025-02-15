@@ -11,6 +11,7 @@ var player_points: int = 0
 var enemy_points: int = 0
 var difficulty: int = 4000
 var player_score: int = 0
+var current_scene = "start"
 
 
 func _ready() -> void:
@@ -42,9 +43,10 @@ func calculate_frequeuncy(start_point: float, scaling: float = 0.5):
 
 
 func reset():
+	current_scene = "start"
 	player_coordinates = Vector2(0, 0)
-	enemy_coordinates = []
-	create_enemy_spawns()
+	enemy_coordinates = create_enemy_spawns()
 	player_health = 16
 	player_points = 0
 	enemy_points = 0
+	player_score = 0
