@@ -9,6 +9,8 @@ var enemy_coordinates: Array
 var player_health: int = 16
 var player_points: int = 0
 var enemy_points: int = 0
+var difficulty: int = 4000
+
 
 func _ready() -> void:
 	enemy_coordinates = create_enemy_spawns()
@@ -32,3 +34,16 @@ func remove_enemy_spawn(cell: Vector2):
 	var enemy_spawn_index = enemy_coordinates.find(cell)
 	if enemy_spawn_index != -1:
 		enemy_coordinates.remove_at(enemy_spawn_index)
+
+
+func calculate_frequeuncy(start_point: float, scaling: float = 0.5):
+	return start_point * pow(1.0 / OverworldState.difficulty, scaling)
+
+
+func reset():
+	player_coordinates = Vector2(0, 0)
+	enemy_coordinates = []
+	create_enemy_spawns()
+	player_health = 16
+	player_points = 0
+	enemy_points = 0

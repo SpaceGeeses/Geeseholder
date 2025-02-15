@@ -15,6 +15,7 @@ script = ExtResource("1_gck6w")
 scale = Vector2(0.25, 0.25)
 
 [node name="ShapeSpawnManager" parent="." instance=ExtResource("2_1wa0m")]
+spawn_time = 1.0
 
 [node name="ShapeBrokenManager" parent="." instance=ExtResource("3_1hugj")]
 

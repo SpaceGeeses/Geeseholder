@@ -81,6 +81,7 @@ func walk_along(path: PackedVector2Array) -> void:
 	if path.is_empty():
 		return
 
+	OverworldState.difficulty += path.size() - 1
 	curve.add_point(Vector2.ZERO)
 	for point in path:
 		curve.add_point(grid.calculate_map_position(point) - position)
